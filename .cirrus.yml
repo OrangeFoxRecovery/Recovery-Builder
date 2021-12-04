@@ -1,11 +1,11 @@
 env:
     MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-10.0-deprecated
-    DT_LINK: https://gitlab.com/OrangeFoxRecovery/device/dandelion.git -b fox_10.0
-    DEVICE: dandelion
-    OEM: xiaomi
+    DT_LINK: https://github.com/Atharv2951-Roms/device_samsung_j7velte
+    DEVICE: j7velte
+    OEM: samsung
     DT_PATH: device/$OEM/$DEVICE
     TARGET: recoveryimage
-    EXTRA_CMD: git clone https://github.com/OrangeFoxRecovery/Avatar.git misc
+    EXTRA_CMD: git clone https://github.com/Atharv2951-Roms/ofrp_avtar misc
     OUTPUT: OrangeFox*.zip 
 
 task:
