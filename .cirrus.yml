@@ -47,8 +47,12 @@ task:
       - echo "============================"
   
   Clone-OrangeFox-Theme_script:
+      - cd ~/work
       - cd fox_10.0
       - git clone https://github.com/Atharv2951-Roms/recovery_device_samsung_m11q device/samsung/m11q
+      - rm -rf bootable/recovery vendor/recovery
+      - git clone https://gitlab.com/OrangeFox/bootable/Recovery.git -b fox_10.0 bootable/recovery
+      - git clone https://gitlab.com/OrangeFox/vendor/recovery.git -b fox_10.0 vendor/recovery
       - git clone https://gitlab.com/OrangeFox/misc/Theme.git bootable/recovery/gui/theme
   
   Build_script:
