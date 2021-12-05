@@ -1,13 +1,3 @@
-env:
-    MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-10.0-deprecated
-    DT_LINK: https://github.com/Atharv2951-Roms/device_samsung_j7velte
-    DEVICE: j7velte
-    OEM: samsung
-    DT_PATH: device/$OEM/$DEVICE
-    TARGET: recoveryimage
-    EXTRA_CMD: git clone https://github.com/Atharv2951-Roms/ofrp_avtar misc
-    OUTPUT: OrangeFox*.zip 
-
 task:
   name: "Setting Up, Syncing, Building and Uploading..."
   timeout_in: 240m  
@@ -21,19 +11,15 @@ task:
        - apt update
        - apt install sudo
        - df -h
-       - DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata
-       - ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
-       - apt-get install -y tzdata
-       - dpkg-reconfigure --frontend noninteractive tzdata
-       - sudo apt update -y && sudo apt install git aria2 curl wget rsync zip unzip lzma cpio ccache neofetch -y
-       - sudo apt install python2 -y
+       - cd ~
+       - sudo apt install git aria2 -y
+       - git clone https://gitlab.com/OrangeFox/misc/scripts
+       - cd scripts
+       - sudo bash setup/android_build_env.sh
+       - sudo bash setup/install_android_sdk.sh
        - sudo ln -sf /usr/bin/python2 /usr/bin/python
        - git config --global user.name "Sushrut1101"
        - git config --global user.email "guptasushrut@gmail.com"
-       - git clone https://github.com/akhilnarang/scripts.git ~/scripts
-       - cd ~/scripts
-       - sudo bash setup/android_build_env.sh
-       - cd ~
   
   Neofetch_script:
        - neofetch
@@ -47,33 +33,18 @@ task:
       - echo "============================"
       - echo "Syncing The Sources..."
       - echo "============================"
-      - mkdir -p ~/work
-      - cd ~/work
-      - repo init --depth=1 -u $MANIFEST 
-      - repo sync -j16 --force-sync --no-tags --no-clone-bundle
-      - git clone $DT_LINK $DT_PATH
+      - mkdir ~/OrangeFox_sync
+      - cd ~/OrangeFox_sync
+      - git clone https://gitlab.com/OrangeFox/sync.git
+      - cd sync
+      - ./orangefox_sync.sh --branch 10.0 --path ~/fox_10.0
+      - git clone https://github.com/Atharv2951-Roms/recovery_device_samsung_m11q device/samsung/m11q
       - echo "============================"
       - echo "Syncing Complete!"
       - echo "============================"
   
-  fox-10-setup_script:
-      - cd ~/work
-      - cd build
-      - wget https://gitlab.com/OrangeFox/sync/-/raw/master/patches/patch-manifest-fox_10.0.diff
-      - patch -p1 < patch-manifest-fox_10.0.diff
-      - rm -rf patch-manifest-fox_10.0.diff
-      - cd -
-      - rm -rf bootable/recovery vendor/recovery
-      - git clone https://gitlab.com/OrangeFox/bootable/Recovery.git -b fox_10.0 bootable/recovery
-      - git clone https://gitlab.com/OrangeFox/vendor/recovery.git -b fox_10.0 vendor/recovery
-  
   Clone-OrangeFox-Theme_script:
-      - git clone https://gitlab.com/OrangeFox/misc/Theme.git ~/work/bootable/recovery/gui/theme
-  
-  Clone-QCOM-Stuff_script:
-      - cd ~/work
-      - git clone https://github.com/TeamWin/android_device_qcom_twrp-common.git -b android-10 device/qcom/twrp-common
-      - git clone https://github.com/TeamWin/android_device_qcom_common.git -b android-10 device/qcom/common
+      - git clone https://gitlab.com/OrangeFox/misc/Theme.git ~/OrangeFox_sync/sync/
   
   Build_script:
       - echo "============================"
@@ -88,20 +59,19 @@ task:
       - export CCACHE_EXEC=/usr/bin/ccache
       - ccache -M 50G
       - . build/envsetup.sh
-      - . $DT_PATH/vendorsetup.sh
-      - lunch omni_$DEVICE-eng
-      - mka -j16 $TARGET
+      - lunch omni_m11q-eng
+      - mka recoveryimage
      
   Upload_script:
       - echo "============================"
       - echo "Uploading the Build..."
       - echo "============================"
-      - cd ~/work
-      - cd out/target/product/"$DEVICE"
+      - cd ~/OrangeFox_sync/sync/
+      - cd out/target/product/m11q
       - ls -lh
       - pwd
       - chmod 777 *
-      - curl --upload-file $(echo $OUTPUT) https://transfer.sh | tee link.txt && echo " "
+      - curl --upload-file O*.zip https://transfer.sh | tee link.txt && echo " "
       - echo " "
       - echo "============================"
       - echo "Build Uploaded!"
