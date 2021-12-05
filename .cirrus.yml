@@ -59,7 +59,8 @@ task:
       - echo "============================"
       - echo "Starting the Build..."
       - echo "============================"
-      - cd ~/work
+      - cd ~
+      - cd fox_10.0
       - export ALLOW_MISSING_DEPENDENCIES=true
       - export LC_ALL="C"
       - export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
