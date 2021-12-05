@@ -49,7 +49,7 @@ task:
   Clone-OrangeFox-Theme_script:
       - cd ~
       - cd fox_10.0
-      - git clone https://github.com/Atharv2951-Roms/recovery_device_samsung_m11q device/samsung/m11q
+      - git clone https://github.com/Atharv2951-Roms/device_samsung_j7velte device/samsung/j7velte
       - rm -rf bootable/recovery vendor/recovery
       - git clone https://gitlab.com/OrangeFox/bootable/Recovery.git -b fox_10.0 bootable/recovery
       - git clone https://gitlab.com/OrangeFox/vendor/recovery.git -b fox_10.0 vendor/recovery
@@ -69,7 +69,7 @@ task:
       - export CCACHE_EXEC=/usr/bin/ccache
       - ccache -M 50G
       - . build/envsetup.sh
-      - lunch omni_m11q-eng
+      - lunch omni_j7velte-eng
       - mka recoveryimage
      
   Upload_script:
