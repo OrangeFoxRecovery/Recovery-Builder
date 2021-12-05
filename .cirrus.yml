@@ -42,13 +42,14 @@ task:
       - git clone https://gitlab.com/OrangeFox/sync.git
       - cd sync
       - ./orangefox_sync.sh --branch 10.0 --path ~/fox_10.0
-      - git clone https://github.com/Atharv2951-Roms/recovery_device_samsung_m11q device/samsung/m11q
       - echo "============================"
       - echo "Syncing Complete!"
       - echo "============================"
   
   Clone-OrangeFox-Theme_script:
-      - git clone https://gitlab.com/OrangeFox/misc/Theme.git ~/OrangeFox_sync/sync/
+      - cd fox_10.0
+      - git clone https://github.com/Atharv2951-Roms/recovery_device_samsung_m11q device/samsung/m11q
+      - git clone https://gitlab.com/OrangeFox/misc/Theme.git bootable/recovery/gui/theme
   
   Build_script:
       - echo "============================"
