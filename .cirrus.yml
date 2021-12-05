@@ -11,15 +11,19 @@ task:
        - apt update
        - apt install sudo
        - df -h
-       - cd ~
-       - sudo apt install git aria2 -y
-       - git clone https://gitlab.com/OrangeFox/misc/scripts
-       - cd scripts
-       - sudo bash setup/android_build_env.sh
-       - sudo bash setup/install_android_sdk.sh
+       - DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata
+       - ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
+       - apt-get install -y tzdata
+       - dpkg-reconfigure --frontend noninteractive tzdata
+       - sudo apt update -y && sudo apt install git aria2 curl wget rsync zip unzip lzma cpio ccache neofetch -y
+       - sudo apt install python2 -y
        - sudo ln -sf /usr/bin/python2 /usr/bin/python
-       - git config --global user.name "Sushrut1101"
-       - git config --global user.email "guptasushrut@gmail.com"
+       - git config --global user.name "atharv2951"
+       - git config --global user.email "atharv2951@gmail.com"
+       - git clone https://github.com/akhilnarang/scripts.git ~/scripts
+       - cd ~/scripts
+       - sudo bash setup/android_build_env.sh
+       - cd ~
   
   Neofetch_script:
        - neofetch
