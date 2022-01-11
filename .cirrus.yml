@@ -4,9 +4,9 @@ env:
 
     # Device
     FOX_BRANCH: fox_10.0
-    DT_LINK: https://github.com/OrangeFoxRecovery/device_samsung_m20lte.git -b fox_10.0
-    DEVICE: m20lte
-    OEM: samsung
+    DT_LINK: https://github.com/TeamWin/android_device_oneplus_kebab -b android-11
+    DEVICE: kebab
+    OEM: oneplus
     TARGET: recoveryimage
 
     DT_PATH: device/$OEM/$DEVICE
@@ -41,6 +41,9 @@ task:
 
   Sync_script:
       - bash sync.sh
+      
+  Clone-Device-Dependencies_script:
+      - git clone --depth=1 https://github.com/AOSPA/android_kernel_oneplus_sm8250 --single-branch --branch main ${SYNC_PATH}/kernel/oneplus/kebab
 
   Build_script:
       - bash build.sh
