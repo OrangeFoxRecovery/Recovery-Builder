@@ -26,7 +26,7 @@ cd $SYNC_PATH
 
 # Clone the theme if not already present
 if [ ! -d bootable/recovery/gui/theme ]; then
-git clone https://gitlab.com/OrangeFox/misc/theme.git -b master bootable/recovery/gui/theme || { echo "ERROR: Failed to Clone the OrangeFox Theme!" && exit 1; }
+git clone https://gitlab.com/OrangeFox/misc/theme.git bootable/recovery/gui/theme || { echo "ERROR: Failed to Clone the OrangeFox Theme!" && exit 1; }
 fi
 
 # Clone the Commonsys repo, only for fox_9.0
