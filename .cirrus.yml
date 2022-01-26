@@ -4,8 +4,8 @@ env:
 
     # Device
     FOX_BRANCH: fox_9.0
-    DT_LINK: https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0
-    DEVICE: beryllium
+    DT_LINK: https://github.com/Azure-007/android_device_xiaomi_raphael-ofox.git -b a11fw
+    DEVICE: raphael
     OEM: xiaomi
     TARGET: recoveryimage
 
@@ -26,8 +26,8 @@ env:
     CIRRUS_SHELL: bash
 
     # Telegram
-    TG_CHAT_ID: ENCRYPTED[0003e1cf5276424a5b2afb8c6a39f2d830864e8555b37220bd3bf173f3ef5b8769ab98425d96a76adf64b18241c940dd]
-    TG_TOKEN: ENCRYPTED[03de4105db5d23ec42490965c0a0f79217c1e3366cb152bd9d9a045e22586eba675615e1f08bf1aea3e860d499efde60]
+    TG_CHAT_ID: -1001223945191
+    TG_TOKEN: 5142076608:AAG4kk4owwAfwszKboyyGj0S2uRQCDJHNBQ
 
 task:
   name: "Recovery Build"
