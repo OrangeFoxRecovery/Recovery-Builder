@@ -31,7 +31,7 @@ fi
 
 # Clone the Commonsys repo, only for fox_9.0
 if [ "$FOX_BRANCH" = "fox_9.0" ]; then
-git clone --depth=1 https://github.com/TeamWin/android_vendor_qcom_opensource_commonsys.git -b android-9.0 vendor/qcom/opensource/commonsys || { echo "WARNING: Failed to Clone the Commonsys Repo!"; }
+git clone --depth=1 https://github.com/omnirom/android_vendor_qcom_opensource_commonsys.git -b android-9.0 vendor/qcom/opensource/commonsys || { echo "WARNING: Failed to Clone the Commonsys Repo!"; }
 fi
 
 # Clone Trees
