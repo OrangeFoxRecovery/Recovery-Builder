@@ -31,7 +31,6 @@ env:
 
 task:
   name: "Recovery Build"
-  trigger_type: manual
   timeout_in: 120m
   container:
       image: ghcr.io/sushrut1101/docker:latest
