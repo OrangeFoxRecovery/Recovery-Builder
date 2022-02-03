@@ -4,9 +4,9 @@ env:
 
     # Device
     FOX_BRANCH: fox_9.0
-    DT_LINK: https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0
-    DEVICE: beryllium
-    OEM: xiaomi
+    DT_LINK: https://github.com/iamshubh69/device_recovery_moon -b 11
+    DEVICE: moon
+    OEM: realme
     TARGET: recoveryimage
 
     DT_PATH: device/$OEM/$DEVICE
