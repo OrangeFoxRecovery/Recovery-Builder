@@ -3,7 +3,7 @@ env:
     FOX_SYNC: https://gitlab.com/OrangeFox/sync.git
 
     # Device
-    FOX_BRANCH: fox_9.0
+    FOX_BRANCH: fox_11.0
     DT_LINK: https://github.com/Azure-007/android_device_xiaomi_raphael-ofox.git -b a11fw
     DEVICE: raphael
     OEM: xiaomi
