@@ -21,7 +21,7 @@ echo "============================"
 cd out/target/product/${DEVICE}
 
 # Set FILENAME var
-FILENAME=$(echo $OUTPUT)
+FILENAME=$(echo *.zip)
 
 # Upload to oshi.at
 if [ -z "$TIMEOUT" ];then
