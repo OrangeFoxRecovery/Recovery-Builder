@@ -3,10 +3,10 @@ env:
     FOX_SYNC: https://gitlab.com/OrangeFox/sync.git
 
     # Device
-    FOX_BRANCH: fox_9.0
-    DT_LINK: https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0
-    DEVICE: beryllium
-    OEM: xiaomi
+    FOX_BRANCH: fox_11.0
+    DT_LINK: https://github.com/iamshubh69/android_device_realme_moon -b android-11.0
+    DEVICE: moon
+    OEM: realme
     TARGET: recoveryimage
 
     DT_PATH: device/$OEM/$DEVICE
@@ -34,7 +34,7 @@ task:
   trigger_type: manual
   timeout_in: 120m
   container:
-      image: ghcr.io/sushrut1101/docker:latest
+      image: ghcr.io/iamshubh69/docker:main
       cpu: 8
       memory: 32G
 
