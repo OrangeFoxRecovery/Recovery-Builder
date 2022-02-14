@@ -4,7 +4,7 @@ env:
 
     # Device
     FOX_BRANCH: fox_7.1
-    DT_LINK: https://github.com/Jebaitedneko/omni_device_A37f.git -b OFX7.1
+    DT_LINK: https://github.com/yashraj22/omni_device_A37f.git -b OFX7.1
     DEVICE: A37f
     OEM: oppo
     TARGET: recoveryimage
