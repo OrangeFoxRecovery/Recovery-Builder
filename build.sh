@@ -12,6 +12,11 @@ telegram_message() {
 # Change to the Source Directry
 cd $SYNC_PATH
 
+# Sync Branch (will be used to fix legacy build system errors)
+if [ -z "$SYNC_BRANCH" ]; then
+    export SYNC_BRANCH=$(echo ${FOX_BRANCH} | cut -d_ -f2)
+fi
+
 # Set-up ccache
 if [ -z "$CCACHE_SIZE" ]; then
     ccache -M 10G
@@ -51,6 +56,12 @@ export LC_ALL="C"
 # Default Build Type
 if [ -z "$FOX_BUILD_TYPE" ]; then
     export FOX_BUILD_TYPE="Unofficial-CI"
+fi
+
+# Legacy Build Systems
+if [ $(echo $SYNC_BRANCH | cut -d. -f1) -le 6 ]; then
+    export OF_DISABLE_KEYMASTER2=1 # Disable Keymaster2
+    export OF_LEGACY_SHAR512=1 # Fix Compilation on Legacy Build Systems
 fi
 
 # lunch the target
