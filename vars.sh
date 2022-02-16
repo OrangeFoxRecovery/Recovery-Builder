@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_7.1"
+export FOX_BRANCH="fox_9.0"
 export DT_LINK="https://github.com/yashraj22/omni_device_A37f.git -b OFX7.1"
 
 export DEVICE="A37f"
