@@ -5,7 +5,8 @@ source vars.sh
 
 # A Function to Send Posts to Telegram
 telegram_message() {
-	curl -s -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" -d chat_id="${TG_CHAT_ID}" \
+	curl -s -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
+	-d chat_id="${TG_CHAT_ID}" \
 	-d parse_mode="Markdown" \
 	-d text="$1"
 }
@@ -49,7 +50,7 @@ echo "Mirror: ${MIRROR_LINK}" || { echo "WARNING: Failed to Mirror the Build!"; 
 echo "=============================================="
 
 # Send the Message on Telegram
-telegram_message \
+printf \
 "
 🦊 OrangeFox Recovery CI
 
@@ -60,7 +61,12 @@ telegram_message \
 ⬇️ Download Link: [${DL_LINK}](Here)
 📅 Date: $(date +'%d %B %Y')
 ⏱ Time: $(date +"%T")
-"
+" > tg.md
+
+TG_TEXT=$(< tg.md)
+
+telegram_message "$TG_TEXT"
+
 echo " "
 
 # Exit

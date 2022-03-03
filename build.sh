@@ -5,7 +5,9 @@ source vars.sh
 
 # A Function to Send Posts to Telegram
 telegram_message() {
-	curl -s -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" -d chat_id="${TG_CHAT_ID}" \
+	curl -s -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
+	-d chat_id="${TG_CHAT_ID}" \
+	-d parse_mode="Markdown" \
 	-d text="$1"
 }
 
@@ -30,7 +32,7 @@ if [ -f frameworks/base/core/xsd/vts/Android.mk ]; then
 fi
 
 # Send the Telegram Message
-telegram_message \
+printf \
 "
 🦊 OrangeFox Recovery CI
 
@@ -39,7 +41,11 @@ telegram_message \
 📱 Device: ${DEVICE}
 🌲 Logs: [https://cirrus-ci.com/build/${CIRRUS_BUILD_ID}](https://cirrus-ci.com/build/${CIRRUS_BUILD_ID})
 🖥 Build System: ${FOX_BRANCH}
-"
+" > tg.md
+
+TG_TEXT=$(< tg.md)
+
+telegram_message "${TG_TEXT}"
 echo " "
 
 # Prepare the Build Environment
@@ -57,6 +63,9 @@ export LC_ALL="C"
 if [ -z "$FOX_BUILD_TYPE" ]; then
     export FOX_BUILD_TYPE="Unofficial-CI"
 fi
+
+# Default Maintainer's Name
+[ -z "$OF_MAINTAINER" ] && export OF_MAINTAINER="Unknown"
 
 # Legacy Build Systems
 if [ $(echo $SYNC_BRANCH | cut -d. -f1) -le 6 ]; then
