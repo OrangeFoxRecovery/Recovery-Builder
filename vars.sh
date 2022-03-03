@@ -2,10 +2,10 @@
 
 # Device
 export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export DT_LINK="https://github.com/yashraj22/omni_device_A37f.git -b OFX7.1"
 
-export DEVICE="beryllium"
-export OEM="xiaomi"
+export DEVICE="A37f"
+export OEM="oppo"
 export TARGET="recoveryimage"
 
 export DT_PATH="device/$OEM/$DEVICE"

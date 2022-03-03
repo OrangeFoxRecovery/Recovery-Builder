@@ -17,4 +17,4 @@ A Free CI to Build OrangeFox Recovery
 4. Go to [cirrus-ci.com](https://cirrus-ci.com) And see the Build Logs.
 
 ## Credis
-- @Sushrut1101 - To Make this CI
+- @Sushrut1101 - For Making this CI 
