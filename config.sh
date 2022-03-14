@@ -1,22 +1,19 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export FOX_BRANCH="fox_11.0"
+export DT_LINK="https://github.com/Pranav-Talmale/android_device_xiaomi_lisa.git -b renoir-rework"
 
-export DEVICE="beryllium"
+export DEVICE="lisa"
 export OEM="xiaomi"
-export TARGET="recoveryimage"
+export TARGET="adbd bootimage"
 
 export OUTPUT="OrangeFox*.zip"
 
 # Kernel Source
 # Uncomment the next line if you want to clone a kernel source.
-#export KERNEL_SOURCE="https://gitlab.com/OrangeFox/kernel/mojito.git"
+export KERNEL_SOURCE="https://github.com/nebrassy/android_kernel_xiaomi_renoir"
 #export PLATFORM="sm6150" # Leave it commented if you want to clone the kernel to kernel/$OEM/$DEVICE
-
-# Extra Command
-export EXTRA_CMD="git clone https://github.com/OrangeFoxRecovery/Avatar.git misc"
 
 # Not Recommended to Change
 export SYNC_PATH="$HOME/work" # Full (absolute) path.
