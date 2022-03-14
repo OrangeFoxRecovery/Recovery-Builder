@@ -2,9 +2,9 @@
 
 # Device
 export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export DT_LINK="https://github.com/karan2354/android_recovery_xiaomi_olivewood.git -b olivewood-ofox"
 
-export DEVICE="beryllium"
+export DEVICE="olivewood"
 export OEM="xiaomi"
 export TARGET="recoveryimage"
 
@@ -13,7 +13,7 @@ export OUTPUT="OrangeFox*.zip"
 # Kernel Source
 # Uncomment the next line if you want to clone a kernel source.
 #export KERNEL_SOURCE="https://gitlab.com/OrangeFox/kernel/mojito.git"
-#export PLATFORM="sm6150" # Leave it commented if you want to clone the kernel to kernel/$OEM/$DEVICE
+#export PLATFORM="sdm439" # Leave it commented if you want to clone the kernel to kernel/$OEM/$DEVICE
 
 # Extra Command
 export EXTRA_CMD="git clone https://github.com/OrangeFoxRecovery/Avatar.git misc"
