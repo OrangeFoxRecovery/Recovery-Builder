@@ -66,7 +66,7 @@ if [ -z "$FOX_BUILD_TYPE" ]; then
 fi
 
 # Default Maintainer's Name
-[ -z "$OF_MAINTAINER" ] && export OF_MAINTAINER="Unknown"
+[ -z "$OF_MAINTAINER" ] && export OF_MAINTAINER="Blaze"
 
 # Legacy Build Systems
 if [ $(echo $SYNC_BRANCH | cut -d. -f1) -le 6 ]; then
