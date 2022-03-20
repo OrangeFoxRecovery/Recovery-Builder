@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/Johx22/android_device_lenovo_YT_X705F -b master"
+export DT_LINK="https://github.com/Johx22/android_device_lenovo_YT_X705F -b test"
 
 export DEVICE="YT_X705F"
 export OEM="lenovo"
