@@ -1,19 +1,19 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export FOX_BRANCH="fox_11.0"
+export DT_LINK="https://github.com/OrangeFoxRecovery/device_oneplus_Nord.git -b fox_11.0"
 
-export DEVICE="beryllium"
-export OEM="xiaomi"
+export DEVICE="Nord"
+export OEM="oneplus"
 export TARGET="recoveryimage"
 
 export OUTPUT="OrangeFox*.zip"
 
 # Kernel Source
 # Uncomment the next line if you want to clone a kernel source.
-#export KERNEL_SOURCE="https://gitlab.com/OrangeFox/kernel/mojito.git"
-#export PLATFORM="sm6150" # Leave it commented if you want to clone the kernel to kernel/$OEM/$DEVICE
+export KERNEL_SOURCE="https://github.com/OnePlusOSS/android_vendor_qcom_opensource_audio_kernel_sm7250.git"
+PLATFORM="sm7250" # Leave it commented if you want to clone the kernel to kernel/$OEM/$DEVICE
 
 # Extra Command
 export EXTRA_CMD="git clone https://github.com/OrangeFoxRecovery/Avatar.git misc"
