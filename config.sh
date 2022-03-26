@@ -2,13 +2,13 @@
 
 # Device
 export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/OrangeFoxRecovery/device_oneplus_avicii.git -b fox_10.0"
+export DT_LINK="https://github.com/OrangeFoxRecovery/device_oneplus_Nord.git -b fox_10.0"
 
-export DEVICE="avicii"
+export DEVICE="nord"
 export OEM="oneplus"
 export TARGET="recoveryimage"
 
-export OUTPUT="OrangeFox.zip"
+export OUTPUT="OrangeFox*.zip"
 
 # Kernel Source
 # Uncomment the next line if you want to clone a kernel source.
