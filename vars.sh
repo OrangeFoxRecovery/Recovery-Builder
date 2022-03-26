@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_11.0"
+export FOX_BRANCH="fox_10.0"
 export DT_LINK="https://github.com/OrangeFoxRecovery/device_oneplus_avicii.git -b fox_10.0"
 
 export DEVICE="avicii"
