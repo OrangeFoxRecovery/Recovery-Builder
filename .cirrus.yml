@@ -3,7 +3,7 @@ env:
     FOX_SYNC: https://gitlab.com/OrangeFox/sync.git
 
     # Config
-    CONFIG: https://github.com/dkpost3/OrangeFox-CI/blob/main/config.sh
+    CONFIG: config.sh
 
     # Telegram
     TG_CHAT_ID: ENCRYPTED[0003e1cf5276424a5b2afb8c6a39f2d830864e8555b37220bd3bf173f3ef5b8769ab98425d96a76adf64b18241c940dd]
