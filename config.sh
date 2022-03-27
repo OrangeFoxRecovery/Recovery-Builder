@@ -2,10 +2,10 @@
 
 # Device
 export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/Johx22/android_device_lenovo_YT_X705F -b test"
+export DT_LINK="https://github.com/Johx22/device_oppo_OP4F2F"
 
-export DEVICE="YT_X705F"
-export OEM="lenovo"
+export DEVICE="OP4F2F"
+export OEM="oppo"
 export TARGET="recoveryimage"
 
 export OUTPUT="OrangeFox*.zip"
