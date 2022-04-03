@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export FOX_BRANCH="fox_11.0"
+export DT_LINK="https://github.com/axe-e/device_xiaomi_spes.git -b fox_11.0"
 
-export DEVICE="beryllium"
+export DEVICE="spes"
 export OEM="xiaomi"
-export TARGET="recoveryimage"
+export TARGET="bootimage"
 
 export OUTPUT="OrangeFox*.zip"
 
