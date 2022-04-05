@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/Johx22/device_oppo_OP4F2F"
+export DT_LINK="https://github.com/Johx22/device_oppo_OP4F2F.git"
 
 export DEVICE="OP4F2F"
 export OEM="oppo"
