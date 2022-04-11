@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_11.0"
+export FOX_BRANCH="fox_10.0"
 export DT_LINK="https://github.com/Johx22/android_device_samsung_j4lte -b fox_9.0"
 
 export DEVICE="j4ltejx"
