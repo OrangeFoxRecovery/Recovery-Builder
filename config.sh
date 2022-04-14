@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export FOX_BRANCH="fox_8.1"
+export DT_LINK="https://github.com/Neffos-MT6750-Series/twrp-Y7.git -b oreo"
 
-export DEVICE="beryllium"
-export OEM="xiaomi"
+export DEVICE="Y7"
+export OEM="neffos"
 export TARGET="recoveryimage"
 
 export OUTPUT="OrangeFox*.zip"
