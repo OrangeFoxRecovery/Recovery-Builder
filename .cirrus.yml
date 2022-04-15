@@ -1,12 +1,12 @@
 env:
-    MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-10.0-deprecated
-    DT_LINK: https://github.com/Redmi-MT6765/recovery_dandelion.git -b fox_10.0
-    DEVICE: dandelion
+    MANIFEST: https://github.com/SHRP/manifest.git -b twrp-10.0-deprecated
+    DT_LINK: https://github.com/SHRP-Devices/device_xiaomi_whyred -b v3_11.0
+    DEVICE: whyred
     OEM: xiaomi
     DT_PATH: device/$OEM/$DEVICE
     TARGET: recoveryimage
-    EXTRA_CMD: git clone https://github.com/OrangeFoxRecovery/Avatar.git misc
-    OUTPUT: OrangeFox*.zip 
+    # EXTRA_CMD: git clone https://github.com/OrangeFoxRecovery/Avatar.git misc
+    OUTPUT: SHRP*.zip 
 
 task:
   name: "Setting Up, Syncing, Building and Uploading..."
@@ -68,7 +68,7 @@ task:
       - git clone https://gitlab.com/OrangeFox/vendor/recovery.git -b fox_10.0 vendor/recovery
   
   Clone-OrangeFox-Theme_script:
-      - git clone https://gitlab.com/OrangeFox/misc/Theme.git ~/work/bootable/recovery/gui/theme
+      - # git clone https://gitlab.com/OrangeFox/misc/Theme.git ~/work/bootable/recovery/gui/theme
   
   Clone-QCOM-Stuff_script:
       - cd ~/work
