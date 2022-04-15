@@ -1,6 +1,6 @@
 env:
-    MANIFEST: https://github.com/SHRP/manifest.git -b twrp-10.0-deprecated
-    DT_LINK: https://github.com/SHRP-Devices/device_xiaomi_whyred -b v3_11.0
+    MANIFEST: https://github.com/SHRP/manifest.git -b v3_11.0
+    DT_LINK: https://github.com/SHRP-Devices/device_xiaomi_whyred
     DEVICE: whyred
     OEM: xiaomi
     DT_PATH: device/$OEM/$DEVICE
