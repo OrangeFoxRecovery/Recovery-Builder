@@ -12,7 +12,7 @@ export OUTPUT="OrangeFox*.zip"
 
 # Kernel Source
 # Uncomment the next line if you want to clone a kernel source.
-export KERNEL_SOURCE="https://github.com/popoA3M/android_kernel_10or_E"
+#export KERNEL_SOURCE="https://github.com/popoA3M/android_kernel_10or_E"
 #export PLATFORM="sm6150" # Leave it commented if you want to clone the kernel to kernel/$OEM/$DEVICE
 
 # Extra Command
