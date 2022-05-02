@@ -1,12 +1,14 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export FOX_BRANCH="fox_11.0"
+export DT_LINK="https://github.com/ReAllTh/android_device_oneplus_enchilada.git -b fox_11.0"
+export DCT_LINK="https://github.com/ReAllTh/android_device_oneplus_sdm845-common.git -b fox_11.0"
 
-export DEVICE="beryllium"
-export OEM="xiaomi"
-export TARGET="recoveryimage"
+export DEVICE="enchilada"
+export DEVICE_PLATFORM="sdm845-common"
+export OEM="oneplus"
+export TARGET="bootimage"
 
 export OUTPUT="OrangeFox*.zip"
 
@@ -31,3 +33,4 @@ else
     export KERNEL_PATH="kernel/$OEM/$DEVICE"
 fi
 export DT_PATH="device/$OEM/$DEVICE"
+export DCT_PATH="device/$OEM/$DEVICE_PLATFORM"

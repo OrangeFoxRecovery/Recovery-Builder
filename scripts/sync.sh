@@ -41,6 +41,7 @@ fi
 
 # Clone Trees
 git clone $DT_LINK $DT_PATH || { echo "ERROR: Failed to Clone the Device Trees!" && exit 1; }
+git clone $DCT_LINK $DCT_PATH || { echo "ERROR: Failed to Clone the Device Common Trees!" && exit 1; }
 
 # Clone the Kernel Sources
 # only if the Kernel Source is Specified in the Config
