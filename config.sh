@@ -2,10 +2,10 @@
 
 # Device
 export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export DT_LINK="https://github.com/LeDrew2017/android_devic_gta7lite.git"
 
-export DEVICE="beryllium"
-export OEM="xiaomi"
+export DEVICE="gta7lite"
+export OEM="samsung"
 export TARGET="recoveryimage"
 
 export OUTPUT="OrangeFox*.zip"
