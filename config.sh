@@ -17,7 +17,7 @@ export OUTPUT="OrangeFox*.zip"
 
 # Extra Command
 export EXTRA_CMD="git clone https://github.com/OrangeFoxRecovery/Avatar.git misc"
- 
+
 # Not Recommended to Change
 export SYNC_PATH="$HOME/work" # Full (absolute) path.
 export USE_CCACHE=1
