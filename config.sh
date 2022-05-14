@@ -1,19 +1,19 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export FOX_BRANCH="fox_11.0"
+export DT_LINK="https://github.com/eun-Dumpfest/twrp_xiaomi_fog -b twrp-11"
 
-export DEVICE="beryllium"
+export DEVICE="fog"
 export OEM="xiaomi"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
 ## "bootimage" - for A/B devices without recovery partition (and without vendor boot)
 ## "vendorbootimage" - for devices Using vendor boot for the recovery ramdisk (Usually for devices shipped with Android 12 or higher)
-export TARGET="recoveryimage"
+export TARGET="bootimage"
 
-export OUTPUT="OrangeFox*.zip"
+export OUTPUT="OrangeFox-fog-14052022-UNOFFICIAL.zip"
 
 # Kernel Source
 # Uncomment the next line if you want to clone a kernel source.
