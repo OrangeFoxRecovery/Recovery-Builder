@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/eun-Dumpfest/twrp_xiaomi_fog -b twrp-11"
+export DT_LINK="https://github.com/iskandarasri03/twrp_xiaomi_fog -b twrp-11"
 
 export DEVICE="fog"
 export OEM="xiaomi"
