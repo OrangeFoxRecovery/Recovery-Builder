@@ -3,7 +3,7 @@
 # Device
 export FOX_BRANCH="fox_11.0"
 export DT_LINK="https://github.com/clhexx00tlab/recovery_asus_X00T.git -b master"
-
+ 
 export DEVICE="ASUS_X00TD"
 export OEM="asus"
 export TARGET="recoveryimage"
