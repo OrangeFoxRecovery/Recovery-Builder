@@ -4,7 +4,7 @@
 export FOX_BRANCH="fox_11.0"
 export DT_LINK="https://github.com/OrangeFoxRecovery/device_oneplus_Nord.git -b fox_11.0"
 
-export DEVICE="nord"
+export DEVICE="Nord"
 export OEM="oneplus"
 export TARGET="recoveryimage"
 
@@ -12,7 +12,7 @@ export OUTPUT="OrangeFox*.zip"
 
 # Kernel Source
 # Uncomment the next line if you want to clone a kernel source.
-export KERNEL_SOURCE="https://github.com/OnePlusOSS/android_kernel_oneplus_sm7250.git -b oneplus/SM7250_R_11.0"
+export KERNEL_SOURCE="https://github.com/OnePlusOSS/android_kernel_oneplus_sm7250.git"
 export PLATFORM="sm7250" # Leave it commented if you want to clone the kernel to kernel/$OEM/$DEVICE
 
 # Extra Command
