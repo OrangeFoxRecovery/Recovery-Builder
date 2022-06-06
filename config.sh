@@ -3,9 +3,9 @@
 # Device
 export FOX_BRANCH="fox_10.0"
 export DT_LINK="https://github.com/dkpost3/device_oneplus_avicii-1"
-
 export DEVICE="avicii"
 export OEM="oneplus"
+
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
 ## "bootimage" - for A/B devices without recovery partition (and without vendor boot)
