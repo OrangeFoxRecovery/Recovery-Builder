@@ -16,7 +16,7 @@ task:
   name: "Recovery Build"
   timeout_in: 120m
   container:
-      image: ghcr.io/sushrut1101/docker:latest
+      image: ghcr.io/sushrut1101/docker:arch
       cpu: 8
       memory: 20G
 
