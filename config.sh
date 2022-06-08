@@ -2,10 +2,10 @@
 
 # Device
 export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export DT_LINK="https://github.com/popoA3M-World/ofox_10or_E"
 
-export DEVICE="beryllium"
-export OEM="xiaomi"
+export DEVICE="E"
+export OEM="10or"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
@@ -21,7 +21,7 @@ export OUTPUT="OrangeFox*.zip"
 #export PLATFORM="sm6150" # Leave it commented if you want to clone the kernel to kernel/$OEM/$DEVICE
 
 # Extra Command
-export EXTRA_CMD="git clone https://github.com/OrangeFoxRecovery/Avatar.git misc"
+#export EXTRA_CMD="git clone https://github.com/OrangeFoxRecovery/Avatar.git misc"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
