@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/dkpost3/device_oneplus_Nord"
+export DT_LINK="https://github.com/dkpost3/device_oneplus_Nord -b fox_11.0"
 
 export DEVICE="Nord"
 export OEM="oneplus"
@@ -11,7 +11,7 @@ export OEM="oneplus"
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
 ## "bootimage" - for A/B devices without recovery partition (and without vendor boot)
 ## "vendorbootimage" - for devices Using vendor boot for the recovery ramdisk (Usually for devices shipped with Android 12 or higher)
-export TARGET="adbd recoveryimage"
+export TARGET="recoveryimage"
 export OUTPUT="OrangeFox*.zip"
 
 # Kernel Source
