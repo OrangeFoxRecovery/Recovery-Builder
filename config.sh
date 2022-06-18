@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/dkpost3/device_oneplus_Nord -b fox_11.0"
+export DT_LINK="https://github.com/dkpost3/device_oneplus_Nord"
 
 export DEVICE="Nord"
 export OEM="oneplus"
