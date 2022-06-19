@@ -1,6 +1,6 @@
 env:
     # OrangeFox Sync Repository
-    FOX_SYNC: https://github.com/dkpost3/sync.git
+    FOX_SYNC: https://gitlab.com/OrangeFox/sync.git
 
     # Config
     CONFIG: config.sh
@@ -20,7 +20,7 @@ task:
       - curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/checks.sh | bash
 
   Sync_script:
-      - curl -sL https://raw.githubusercontent.com/dkpost3/sync/main/sync.sh | bash
+      - curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/sync.sh | bash
 
   Build_script:
       - curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/build.sh | bash
