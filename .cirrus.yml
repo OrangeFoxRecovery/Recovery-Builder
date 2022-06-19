@@ -1,6 +1,6 @@
 env:
     # OrangeFox Sync Repository
-    FOX_SYNC: FOX_SYNC: https://github.com/dkpost3/sync.git
+    FOX_SYNC: https://github.com/dkpost3/sync.git
 
     # Config
     CONFIG: config.sh
