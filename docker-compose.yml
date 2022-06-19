@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  orangefoxci:
+    image: orangefoxci
+    build:
+      context: .
+      dockerfile: ./Dockerfile
