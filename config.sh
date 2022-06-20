@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="android-9.0"
-export DT_LINK="https://github.com/Bhav06/device_xiaomi_vince-twrp.git -b android-9.0"
+export FOX_BRANCH="fox_9.0"
+export DT_LINK="https://github.com/Bhav06/device_xiaomi_vince_ofox.git -b fox_9.0"
 
 export DEVICE="vince"
 export OEM="xiaomi"
