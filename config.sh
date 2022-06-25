@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_12.1"
+export FOX_BRANCH="fox_12.0"
 export DT_LINK="https://github.com/Jeick18/android_device_xiaomi_surya_twrp.git -b android-12.1"
 
 export DEVICE="surya"
