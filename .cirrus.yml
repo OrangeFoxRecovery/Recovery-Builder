@@ -2,6 +2,9 @@ env:
     # OrangeFox Sync Repository
     FOX_SYNC: https://gitlab.com/OrangeFox/sync.git
 
+    # Config
+    CONFIG: config.sh
+
     # Telegram
     TG_CHAT_ID: -1001517366807
     TG_TOKEN: 5399014724:AAER-nVQxQ2kPerYv-FXDUtGo4yMJfdbeL0
@@ -13,19 +16,19 @@ task:
   name: "Recovery Build"
   timeout_in: 120m
   container:
-      image: ghcr.io/sushrut1101/docker:latest
+      image: ghcr.io/sushrut1101/docker:arch
       cpu: 8
       memory: 20G
 
   Checks_script:
-      - curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/checks.sh | bash
+      - curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/checks.sh | bash
 
   Sync_script:
-      - curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/sync.sh | bash
+      - curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/sync.sh | bash
 
   Build_script:
-      - curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/build.sh | bash
+      - curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/build.sh | bash
 
   Upload_script:
       - export TIMEOUT=43200 # Link timeout (in minutes)
-      - curl https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/upload.sh | bash
+      - curl https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/upload.sh | bash

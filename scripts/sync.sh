@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Source Vars
-source config.sh
+source $CONFIG
 
 # Change to the Home Directory
 cd ~
@@ -17,6 +17,15 @@ telegram_message() {
 # Clone the Sync Repo
 git clone $FOX_SYNC
 cd sync
+
+# Setup Branch names
+if [ "$FOX_BRANCH" = "fox_12.0" ]; then
+	printf "Warning! Using fox_12.1 instead of fox_12.0.\n"
+	FOX_BRANCH="fox_12.1"
+elif [ "$FOX_BRANCH" = "fox_8.0" ]; then
+	printf "Warning! Using fox_8.1 instead of fox_8.0.\n"
+	FOX_BRANCH="fox_8.1"
+fi
 
 # Setup the Sync Branch
 if [ -z "$SYNC_BRANCH" ]; then
@@ -45,6 +54,21 @@ git clone $DT_LINK $DT_PATH || { echo "ERROR: Failed to Clone the Device Trees!"
 # Clone the Kernel Sources
 # only if the Kernel Source is Specified in the Config
 [ ! -z "$KERNEL_SOURCE" ] && git clone --depth=1 --single-branch $KERNEL_SOURCE $KERNEL_PATH
+
+# Magisk
+if [[ $OF_USE_LATEST_MAGISK = "true" || $OF_USE_LATEST_MAGISK = "1" ]]; then
+	echo "Downloading the Latest Release of Magisk..."
+	LATEST_MAGISK_URL="$(curl -sL https://api.github.com/repos/topjohnwu/Magisk/releases/latest | jq -r . | grep browser_download_url | grep Magisk- | cut -d : -f 2,3 | sed 's/"//g')"
+	mkdir -p ~/Magisk
+	cd ~/Magisk
+	aria2c $LATEST_MAGISK_URL 2>&1 || wget $LATEST_MAGISK_URL 2>&1
+	echo "Magisk Downloaded Successfully"
+	echo "Renaming .apk to .zip ..."
+	#rename 's/.apk/.zip/' Magisk*
+	mv $("ls" Magisk*.apk) $("ls" Magisk*.apk | sed 's/.apk/.zip/g')
+	cd $SYNC_PATH >/dev/null
+	echo "Done!"
+fi
 
 # Exit
 exit 0

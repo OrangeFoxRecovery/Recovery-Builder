@@ -1,7 +1,5 @@
 #!/bin/bash
 
-CONFIG="config.sh"
-
 # Telegram
 tg_check=$(grep 'TG' $CONFIG | wc -l)
 if [[ $tg_check -gt 0 ]]; then
