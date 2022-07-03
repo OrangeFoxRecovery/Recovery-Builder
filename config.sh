@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://gitlab.com/OrangeFox/device/lavender -b fox_12.1"
+export FOX_BRANCH="fox_9.0"
+export DT_LINK="https://gitlab.com/OrangeFox/device/lavender -b fox_9.0"
 
 export DEVICE="lavender"
 export OEM="xiaomi"
