@@ -2,9 +2,9 @@
 
 # Device
 export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export DT_LINK="https://gitlab.com/OrangeFox/device/lavender -b fox_9.0"
 
-export DEVICE="beryllium"
+export DEVICE="lavender"
 export OEM="xiaomi"
 
 # Build Target
@@ -17,8 +17,8 @@ export OUTPUT="OrangeFox*.zip"
 
 # Kernel Source
 # Uncomment the next line if you want to clone a kernel source.
-#export KERNEL_SOURCE="https://gitlab.com/OrangeFox/kernel/mojito.git"
-#export PLATFORM="sm6150" # Leave it commented if you want to clone the kernel to kernel/$OEM/$DEVICE
+#export KERNEL_SOURCE="https://github.com/stormbreaker-project/android_kernel_xiaomi_lavender.git"
+#export PLATFORM="sdm660" # Leave it commented if you want to clone the kernel to kernel/$OEM/$DEVICE
 
 # Extra Command
 export EXTRA_CMD="git clone https://github.com/OrangeFoxRecovery/Avatar.git misc"
