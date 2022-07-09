@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/erwinabs/android_device_xiaomi_ginkgo-TWRP.git -b android-9.0"
+export DT_LINK="https://github.com/PitchBlackRecoveryProject/android_device_xiaomi_ginkgo-pbrp"
 
 export DEVICE="ginkgo"
 export OEM="xiaomi"
