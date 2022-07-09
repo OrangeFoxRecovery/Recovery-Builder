@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export FOX_BRANCH="fox_12.1"
+export DT_LINK="https://github.com/erwinabs/android_device_xiaomi_ginkgo-TWRP.git -b android-9.0"
 
-export DEVICE="beryllium"
+export DEVICE="ginkgo"
 export OEM="xiaomi"
 
 # Build Target
@@ -13,16 +13,16 @@ export OEM="xiaomi"
 ## "vendorbootimage" - for devices Using vendor boot for the recovery ramdisk (Usually for devices shipped with Android 12 or higher)
 export TARGET="recoveryimage"
 
-export OUTPUT="OrangeFox*.zip"
+export OUTPUT="OrangeFox-ginkgo-09072022-Unofficial.zip"
 
 # Additional Dependencies (eg: Kernel Source)
 # Format: "repo dest"
 DEPS=(
-    "https://github.com/OrangeFoxRecovery/Avatar.git misc"
+    "https://github.com/pedrozzz0/avatar.git misc"
 )
 
 # Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=Sushrut1101"
+export EXTRA_CMD="export OF_MAINTAINER=p3dr0"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
