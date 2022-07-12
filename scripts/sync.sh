@@ -51,9 +51,11 @@ fi
 # Clone Trees
 git clone $DT_LINK $DT_PATH || { echo "ERROR: Failed to Clone the Device Trees!" && exit 1; }
 
-# Clone the Kernel Sources
-# only if the Kernel Source is Specified in the Config
-[ ! -z "$KERNEL_SOURCE" ] && git clone --depth=1 --single-branch $KERNEL_SOURCE $KERNEL_PATH
+# Clone Additional Dependencies (Specified by the user)
+for dep in "${DEPS[@]}"; do
+	rm -rf $dep
+	git clone --depth=1 --single-branch $dep
+done
 
 # Magisk
 if [[ $OF_USE_LATEST_MAGISK = "true" || $OF_USE_LATEST_MAGISK = "1" ]]; then
@@ -68,6 +70,12 @@ if [[ $OF_USE_LATEST_MAGISK = "true" || $OF_USE_LATEST_MAGISK = "1" ]]; then
 	mv $("ls" Magisk*.apk) $("ls" Magisk*.apk | sed 's/.apk/.zip/g')
 	cd $SYNC_PATH >/dev/null
 	echo "Done!"
+fi
+
+# Pick patches for fox_12.1
+if [ "${FOX_BRANCH}" = "fox_12.1" ]; then
+	git -C system/vold fetch https://gerrit.twrp.me/android_system_vold refs/changes/40/5540/7
+	git -C system/vold cherry-pick FETCH_HEAD
 fi
 
 # Exit
