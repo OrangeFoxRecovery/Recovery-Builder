@@ -11,7 +11,7 @@ export OEM="oneplus"
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
 ## "bootimage" - for A/B devices without recovery partition (and without vendor boot)
 ## "vendorbootimage" - for devices Using vendor boot for the recovery ramdisk (Usually for devices shipped with Android 12 or higher)
-export TARGET="adbd bootimage"
+export TARGET="recoveryimage"
 export OUTPUT="OrangeFox*.zip"
 
 # Additional Dependencies (eg: Kernel Source)
