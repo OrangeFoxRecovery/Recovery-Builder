@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/OrangeFoxRecovery/device_oneplus_avicii.git"
+export DT_LINK="https://github.com/OrangeFoxRecovery/device_oneplus_avicii.git -b fox_12.1"
 
 export DEVICE="avicii"
 export OEM="oneplus"
@@ -11,7 +11,7 @@ export OEM="oneplus"
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
 ## "bootimage" - for A/B devices without recovery partition (and without vendor boot)
 ## "vendorbootimage" - for devices Using vendor boot for the recovery ramdisk (Usually for devices shipped with Android 12 or higher)
-export TARGET="adbd bootimage"
+export TARGET="adbd vendorbootimage"
 export OUTPUT="OrangeFox_12.1.zip"
 
 # Additional Dependencies (eg: Kernel Source)
