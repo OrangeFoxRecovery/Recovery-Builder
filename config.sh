@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/OrangeFoxRecovery/device_oneplus_avicii -b twrp-12.1"
+export DT_LINK="https://github.com/OrangeFoxRecovery/device_oneplus_avicii.git"
 
 export DEVICE="avicii"
 export OEM="oneplus"
