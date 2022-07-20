@@ -27,11 +27,9 @@ export EXTRA_CMD="export OF_MAINTAINER=Fr0ztyy43"
 export ALLOW_MISSING_DEPENDENCIES=true
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
-export OF_USE_LATEST_MAGISK=true
- . build/envsetup.sh
-$ lunch twrp_begonia-eng
+export OF_USE_LATEST_MAGISK=false
 
-make recoveryimage
+
 # Not Recommended to Change
 export SYNC_PATH="$HOME/work" # Full (absolute) path.
 export USE_CCACHE=1
