@@ -5,7 +5,7 @@ export FOX_BRANCH="fox_11"
 export DT_LINK="https://github.com/Fr0ztyy43/twrp_device_redmi_begonia -b 11"
 
 export DEVICE="begonia"
-export OEM="redmi"
+export OEM="xiaomi"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
@@ -23,11 +23,8 @@ DEPS=(
 )
 
 # Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=Fr0ztyy43"
-export ALLOW_MISSING_DEPENDENCIES=true
-# Magisk
-## Use the Latest Release of Magisk for the OrangeFox addon
-export OF_USE_LATEST_MAGISK=false
+
+
 
 
 # Not Recommended to Change
