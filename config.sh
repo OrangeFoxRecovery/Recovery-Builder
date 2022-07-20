@@ -16,7 +16,7 @@ export TARGET="recoveryimage"
 export OUTPUT="OrangeFox-begonia.zip"
 
 # Additional Dependencies (eg: Kernel Source)
-export KERNEL_SOURCE="https://github.com/theimpulson/android_kernel_redmi_mt6785 -b lineage-17.1 kernel/redmi/begonia"
+
 # Format: "repo dest"
 DEPS=(
     "https://github.com/OrangeFoxRecovery/Avatar.git misc"
