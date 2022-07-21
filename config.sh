@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://github.com/Bhav06/device_xiaomi_vince_recovery.git -b android-9.0"
+export FOX_BRANCH="fox_12.1"
+export DT_LINK="https://github.com/Bhav06/recovery_xiaomi_vince.git -b android-12.1"
 
 export DEVICE="vince"
 export OEM="xiaomi"
