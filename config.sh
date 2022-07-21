@@ -4,7 +4,7 @@
 export FOX_BRANCH="fox_9.0"
 export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
 
-export DEVICE="A515F"
+export DEVICE="a51nsxx"
 export OEM="Samsung"
 
 # Build Target
