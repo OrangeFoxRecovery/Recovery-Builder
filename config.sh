@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/Fr0ztyy43/twrp_redmi_begonia -b 11.0"
+export FOX_BRANCH="fox_9.0"
+export DT_LINK="https://github.com/Fr0ztyy43/android_device_redmi_begonia-1 -b master"
 
 export DEVICE="begonia"
 export OEM="xiaomi"
