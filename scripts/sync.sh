@@ -49,7 +49,7 @@ git clone --depth=1 https://github.com/TeamWin/android_vendor_qcom_opensource_co
 fi
 
 # Clone Trees
-git clone $DT_LINK device/$OEM/$DEVICE || { echo "ERROR: Failed to Clone the Device Trees!" && exit 1; }
+git clone $DT_LINK $DT_PATH || { echo "ERROR: Failed to Clone the Device Trees!" && exit 1; }
 
 # Clone Additional Dependencies (Specified by the user)
 for dep in "${DEPS[@]}"; do
