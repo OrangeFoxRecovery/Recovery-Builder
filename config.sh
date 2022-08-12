@@ -2,9 +2,9 @@
 
 # Device
 export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://github.com/gorkemoji/android_device_samsung_zerolteusc.git -b master"
+export DT_LINK="https://github.com/OrangeFoxRecovery/device_samsung_zerolte.git -b fox_9.0"
 
-export DEVICE="zerolteusc"
+export DEVICE="zerolte"
 export OEM="samsung"
 
 # Build Target
