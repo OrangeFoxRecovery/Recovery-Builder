@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/Fr0ztyy43/twrp_device_redmi_begonia123 -b 11"
+export DT_LINK="https://github.com/RC1844/twrp_redmi_begonia -b MIUI-android-11.0"
 
 export DEVICE="begonia"
 export OEM="redmi"
