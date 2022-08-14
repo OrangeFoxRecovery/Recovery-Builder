@@ -13,7 +13,7 @@ export OEM="redmi"
 ## "vendorbootimage" - for devices Using vendor boot for the recovery ramdisk (Usually for devices shipped with Android 12 or higher)
 export TARGET="recoveryimage"
 
-export OUTPUT="OrangeFox-begonia.zip"
+export OUTPUT="OrangeFox*.zip"
 
 # Additional Dependencies (eg: Kernel Source)
 
