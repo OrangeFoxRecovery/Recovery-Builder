@@ -2,10 +2,10 @@
 
 # Device
 export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/Fr0ztyy43/android_device_redmi_begonia-1 -b master"
+export DT_LINK="https://github.com/RC1844/twrp_redmi_begonia -b MIUI-android-11.0"
 
 export DEVICE="begonia"
-export OEM="xiaomi"
+export OEM="redmi"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
