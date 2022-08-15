@@ -6,8 +6,8 @@ env:
     CONFIG: config.sh
 
     # Telegram
-    TG_CHAT_ID: 5427972486
-    TG_TOKEN: 5427972486:AAHbtAUH2zxd5mFhMnxMTFwS1z0BNakN6Ho
+    TG_CHAT_ID: 
+    TG_TOKEN: 
 
     # Cirrus Specific Vars (Do *NOT* Change)
     CIRRUS_SHELL: bash
