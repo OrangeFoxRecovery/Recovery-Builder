@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/blacklytning/ofox_device_motorola_hanoip -b fox_12.1"
+export DT_LINK="https://github.com/blacklytning/ofox_device_motorola_hanoip -b test"
 
 export DEVICE="hanoip"
 export OEM="motorola"
