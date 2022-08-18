@@ -2,9 +2,9 @@
 
 # Device
 export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://github.com/HoangLong-Lumi/android_device_samsung_beyond1lte"
+export DT_LINK="https://github.com/HoangLong-Lumi/android_device_samsung_beyond2lte"
 
-export DEVICE="beyond1lte"
+export DEVICE="beyond2lte"
 export OEM="samsung"
 
 # Build Target
