@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export FOX_BRANCH="fox_11.0_fbe1"
+export DT_LINK="https://github.com/ThakurRahulSingh/OrangeFox_device_miatoll.git -b fox_11.0_fbe1"
 
-export DEVICE="beryllium"
+export DEVICE="miatoll"
 export OEM="xiaomi"
 
 # Build Target
@@ -22,7 +22,7 @@ DEPS=(
 )
 
 # Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=Sushrut1101"
+export EXTRA_CMD="export OF_MAINTAINER=Rahul-Singh"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
