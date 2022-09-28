@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
+export FOX_BRANCH="fox_11.0"
 export DT_LINK="https://gitlab.com/nazunamoe/twrp_device_oneplus_hotdogb.git -b main"
 
 export DEVICE="hotdogb"
@@ -20,9 +20,6 @@ export OUTPUT="OrangeFox*.zip"
 DEPS=(
     "https://github.com/OrangeFoxRecovery/Avatar.git misc"
 )
-
-# Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=nazunamoe"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
