@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://github.com/nazunamoe/twrp_device_oneplus_hotdogb.git -b main"
+export DT_LINK="https://gitlab.com/nazunamoe/twrp_device_oneplus_hotdogb.git -b main"
 
 export DEVICE="hotdogb"
 export OEM="oneplus"
