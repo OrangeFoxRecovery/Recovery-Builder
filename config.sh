@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox r11.1"
-export DT_LINK="https://github.com/Powerfull11/android_device_realme_RMX2117-android-11.git"
+export DT_LINK="https://github.com/Ravinderrohilla/android_device_realme_RMX2117-android-11.git"
 
 export DEVICE="RMX2117"
 export OEM="Realme"
