@@ -15,15 +15,6 @@ export TARGET="recoveryimage"
 
 export OUTPUT="OrangeFox*.zip"
 
-# Additional Dependencies (eg: Kernel Source)
-# Format: "repo dest"
-DEPS=(
-
-)
-
-# Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=Sushrut1101"
-
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
 export OF_USE_LATEST_MAGISK=true
