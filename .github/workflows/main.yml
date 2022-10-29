@@ -26,5 +26,6 @@ jobs:
         run: bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/build.sh)"
         
       - name: Upload_script
-      
-        
+        run: |
+           export TIMEOUT=43200 # Link timeout (in minutes)
+           bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/upload.sh)"
