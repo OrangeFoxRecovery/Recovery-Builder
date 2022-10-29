@@ -6,14 +6,6 @@ source $CONFIG
 # Change to the Home Directory
 cd ~
 
-# A Function to Send Posts to Telegram
-telegram_message() {
-	curl -s -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
-	-d chat_id="${TG_CHAT_ID}" \
-	-d parse_mode="HTML" \
-	-d text="$1"
-}
-
 # Clone the Sync Repo
 git clone $FOX_SYNC
 cd sync
@@ -51,12 +43,6 @@ fi
 # Clone Trees
 DT_PATH="device/${OEM}/${DEVICE}"
 git clone $DT_LINK $DT_PATH || { echo "ERROR: Failed to Clone the Device Trees!" && exit 1; }
-
-# Clone Additional Dependencies (Specified by the user)
-for dep in "${DEPS[@]}"; do
-	rm -rf $(echo $dep | sed 's/ -b / /g')
-	git clone --depth=1 --single-branch $dep
-done
 
 # Magisk
 if [[ $OF_USE_LATEST_MAGISK = "true" || $OF_USE_LATEST_MAGISK = "1" ]]; then
