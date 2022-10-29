@@ -11,6 +11,9 @@ jobs:
     
       - uses: actions/checkout@v3
         
+      - name: Cleanup
+        uses: rokibhasansagar/slimhub_actions@main
+      
       - name: Prepare the environment
         run: |
            sudo apt update
