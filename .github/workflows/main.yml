@@ -27,7 +27,8 @@ jobs:
     
     steps:
      
-      - uses: actions/checkout@v3
+      - name: Checks_ripo
+        uses: actions/checkout@v3
       
       - name: Checks_script
         run: bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/checks.sh)"
