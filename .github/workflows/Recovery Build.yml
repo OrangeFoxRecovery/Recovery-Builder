@@ -39,8 +39,8 @@ jobs:
            CONFIG: "config.sh"
         run: |
            source config.sh
-           curl -sL https://raw.githubusercontent.com/Diwas007/OrangeFox-CI/main/scripts/checks.sh
-           curl -sL https://raw.githubusercontent.com/Diwas007/OrangeFox-CI/main/scripts/sync.sh
-           curl -sL https://raw.githubusercontent.com/Diwas007/OrangeFox-CI/main/scripts/build.sh
-           curl -sL https://raw.githubusercontent.com/Diwas007/OrangeFox-CI/main/scripts/upload.sh
+           curl -sL https://raw.githubusercontent.com/Diwas007/OrangeFox-CI/main/scripts/checks.sh | bash
+           curl -sL https://raw.githubusercontent.com/Diwas007/OrangeFox-CI/main/scripts/sync.sh | bash
+           curl -sL https://raw.githubusercontent.com/Diwas007/OrangeFox-CI/main/scripts/build.sh | bash
+           curl -sL https://raw.githubusercontent.com/Diwas007/OrangeFox-CI/main/scripts/upload.sh| bash
            
