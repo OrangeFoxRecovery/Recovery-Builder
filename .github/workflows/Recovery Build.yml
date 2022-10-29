@@ -41,3 +41,12 @@ jobs:
            bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/checks.sh)"
            bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/sync.sh)"
            bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/build.sh)"
+    
+      - name: Upload to Release
+        uses: softprops/action-gh-release@v0.1.14
+        with:
+          files: /home/runner/work/out/target/product/on5xelte/OrangeFox-R11.1-Stable-on5xelte.zip
+          name: Image.gz-${{ github.run_id }}
+          tag_name: ${{ github.run_id }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
