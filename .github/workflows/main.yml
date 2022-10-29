@@ -1,0 +1,16 @@
+name: Recovery Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on:
+     container:
+      image: ghcr.io/sushrut1101/docker:arch
+    
+    steps:
+    
+      - uses: actions/checkout@v3
+      
+      - run: bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/checks.sh)"
