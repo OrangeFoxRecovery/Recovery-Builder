@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export FOX_BRANCH="fox_12.1"
+export DT_LINK="hhttps://github.com/Lordfinix/device_oneplus_aviciiv2-TWRP"
 
-export DEVICE="beryllium"
-export OEM="xiaomi"
+export DEVICE="aviciiv2"
+export OEM="oneplus"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
@@ -18,7 +18,7 @@ export OUTPUT="OrangeFox*.zip"
 # Additional Dependencies (eg: Kernel Source)
 # Format: "repo dest"
 DEPS=(
-    "https://github.com/OrangeFoxRecovery/Avatar.git misc"
+
 )
 
 # Extra Command
