@@ -3,17 +3,13 @@ name: Recovery Build
 on:
   workflow_dispatch:
 
-
 jobs:
   build:
-    runs-on: ubuntu-latest
-
+    runs-on: ubuntu-18.04
+    
     steps:
     
       - uses: actions/checkout@v3
-      
-      - name: Cleanup
-        uses: rokibhasansagar/slimhub_actions@main
         
       - name: Prepare the environment
         run: |
@@ -43,4 +39,3 @@ jobs:
            curl -sL https://raw.githubusercontent.com/Diwas007/OrangeFox-CI/main/scripts/sync.sh | bash
            curl -sL https://raw.githubusercontent.com/Diwas007/OrangeFox-CI/main/scripts/build.sh | bash
            curl -sL https://raw.githubusercontent.com/Diwas007/OrangeFox-CI/main/scripts/upload.sh| bash
-           
