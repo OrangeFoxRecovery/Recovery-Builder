@@ -5,8 +5,8 @@ on:
 
 jobs:
   build:
-    runs-on:
-     container:
+    runs-on: ubuntu-latest
+    container:
       image: ghcr.io/sushrut1101/docker:arch
     
     steps:
