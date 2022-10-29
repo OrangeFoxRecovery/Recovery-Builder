@@ -33,9 +33,8 @@ jobs:
       - name: Building recovery
         env:
            CONFIG: "config.sh"
+           FOX_SYNC: https://gitlab.com/OrangeFox/sync.git
         run: |
-           source config.sh
-           curl -sL https://raw.githubusercontent.com/Diwas007/OrangeFox-CI/main/scripts/checks.sh | bash
-           curl -sL https://raw.githubusercontent.com/Diwas007/OrangeFox-CI/main/scripts/sync.sh | bash
-           curl -sL https://raw.githubusercontent.com/Diwas007/OrangeFox-CI/main/scripts/build.sh | bash
-           curl -sL https://raw.githubusercontent.com/Diwas007/OrangeFox-CI/main/scripts/upload.sh| bash
+           bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/checks.sh)"
+           bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/sync.sh)"
+           bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/build.sh)"
