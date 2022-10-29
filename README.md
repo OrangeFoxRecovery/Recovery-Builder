@@ -5,7 +5,8 @@ A Free CI to Build OrangeFox Recovery
 ### - Fork and Build
 
 1. Fork [this Repo](https://github.com/OrangeFoxRecovery/OrangeFox-CI.git).
-2. Update the ```config.sh``` (and ```get your TG bot's ID as well as your chat ID``` for telegram vars) According to your Needs and push a commit.
+2. Update the ```config.sh``` According to your Needs and push a commit.
+3. Get your ```TG bot's ID as well as your chat ID``` for telegram vars.
 
 ## Credits
 - [Sushrut1101](https://github.com/Sushrut1101) - For Making this CI
