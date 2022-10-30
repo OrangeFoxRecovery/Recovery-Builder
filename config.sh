@@ -2,10 +2,10 @@
 
 # Device
 export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export DT_LINK="https://github.com/mohammad92/android_device_samsung_p3s.git -b fox_9.0"
 
-export DEVICE="beryllium"
-export OEM="xiaomi"
+export DEVICE="p3s"
+export OEM="samsung"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
@@ -18,7 +18,7 @@ export OUTPUT="OrangeFox*.zip"
 # Additional Dependencies (eg: Kernel Source)
 # Format: "repo dest"
 DEPS=(
-    "https://github.com/OrangeFoxRecovery/Avatar.git misc"
+     "https://github.com/mohammad92/android_kernel_samsung_exynos2100.git misc"
 )
 
 # Extra Command
