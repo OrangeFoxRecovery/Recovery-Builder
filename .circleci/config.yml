@@ -14,13 +14,12 @@ environment:
 jobs:
   build:
     shell: /bin/bash -eo pipefail
-    container:
-      - image: ghcr.io/sushrut1101/docker:arch
+    machine:
+      image: ubuntu-2204:2022.10.1
     resource_class: medium
+    
     steps:
      
-     - checkout
-      
      - run: 
          command: bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/checks.sh)"
 
