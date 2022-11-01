@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="android-11"
+export FOX_BRANCH="fox_11.0"
 export DT_LINK="https://github.com/edenefri/recovery-device-redmi-viva -b fox_11.0"
 
 export DEVICE="viva"
