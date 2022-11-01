@@ -20,8 +20,8 @@ jobs:
     steps:
      
      - run: 
-         command: bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/checks.sh)"
-
+         command: curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/checks.sh | bash
+     
      - run: 
          command: bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/sync.sh)"
 
