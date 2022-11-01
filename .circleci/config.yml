@@ -18,17 +18,19 @@ jobs:
       - image: ghcr.io/sushrut1101/docker:arch
     resource_class: medium
     steps:
-      - checkout
-      - name: Checks_script
-        run: bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/checks.sh)"
+     
+     - checkout
+      
+      - run: 
+          command: bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/checks.sh)"
 
-      - name: Sync_script
-        run: bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/sync.sh)"
+       - run: 
+           command: bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/sync.sh)"
 
-      - name: Build_script
-        run: bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/build.sh)"
+       - run: 
+           command: bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/build.sh)"
 
-      -name: Upload_script
-       run: |
-          export TIMEOUT=43200 # Link timeout (in minutes)
-          bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/upload.sh)"
+       - run:
+           command: |
+                 export TIMEOUT=43200 # Link timeout (in minutes)
+                 bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/upload.sh)"
