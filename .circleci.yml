@@ -1,0 +1,12 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: cimg/base:2022.10
+    resource_class: medium
+    steps:
+      - checkout
+      # Whatever you want to do
+      - run: sudo apt-get update && sudo apt-get install -y cowsay
+      - run: cowsay Continuous Integration Rocks!
