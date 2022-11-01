@@ -2,9 +2,11 @@ version: 2.1
 
 jobs:
   build:
+    shell: /bin/bash -eo pipefail
     docker:
       - image: ghcr.io/sushrut1101/docker:arch
     resource_class: large
+    parallelism: 4
     environment:
       # OrangeFox Sync Repository
       FOX_SYNC: https://gitlab.com/OrangeFox/sync.git
