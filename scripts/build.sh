@@ -3,14 +3,6 @@
 # Source Configs
 source $CONFIG
 
-# A Function to Send Posts to Telegram
-telegram_message() {
-	curl -s -X POST "https://api.telegram.org/bot${TG_TOKEN}/sendMessage" \
-	-d chat_id="${TG_CHAT_ID}" \
-	-d parse_mode="HTML" \
-	-d text="$1"
-}
-
 # Change to the Source Directry
 cd $SYNC_PATH
 
@@ -31,24 +23,6 @@ if [ "$FOX_BRANCH" = "fox_11.0" ]; then
     rm -rf frameworks/base/core/xsd/vts/Android.mk
     touch frameworks/base/core/xsd/vts/Android.mk 2>/dev/null || echo
 fi
-
-# Send the Telegram Message
-
-echo -e \
-"
-🦊 OrangeFox Recovery CI
-
-✔️ The Build has been Triggered!
-
-📱 Device: "${DEVICE}"
-🖥 Build System: "${FOX_BRANCH}"
-🌲 Logs: <a href=\"https://cirrus-ci.com/build/${CIRRUS_BUILD_ID}\">Here</a>
-" > tg.html
-
-TG_TEXT=$(< tg.html)
-
-telegram_message "${TG_TEXT}"
-echo " "
 
 # Prepare the Build Environment
 source build/envsetup.sh

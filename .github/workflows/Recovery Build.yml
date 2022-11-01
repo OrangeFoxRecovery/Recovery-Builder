@@ -1,0 +1,45 @@
+name: Recovery Build
+
+env:
+   FOX_SYNC: https://gitlab.com/OrangeFox/sync.git
+   CONFIG: config.sh
+   TG_CHAT_ID: ${{ github.event.inputs.TG_CHAT_ID }}
+   TG_TOKEN: ${{ github.event.inputs.TG_TOKEN }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      TG_CHAT_ID:
+        description: 'TG_CHAT_ID'
+        required: true
+      TG_TOKEN:
+        description: 'TG_TOKEN'
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    container:
+      image: ghcr.io/sushrut1101/docker:arch
+    
+    steps:
+     
+      - name: Checks_ripo
+        uses: actions/checkout@v3
+      
+      - name: Checks_script
+        run: bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/checks.sh)"
+
+      - name: Sync_script
+        run: bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/sync.sh)"
+        
+      - name: Build_script
+        run: bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/build.sh)"
+        
+      - name: Upload_script
+        run: |
+           export TIMEOUT=43200 # Link timeout (in minutes)
+           bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/upload.sh)"
