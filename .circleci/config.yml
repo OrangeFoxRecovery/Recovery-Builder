@@ -19,15 +19,16 @@ jobs:
     resource_class: medium
     steps:
       - checkout
-      Checks_script:
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/checks.sh)"
+      - name: Checks_script
+        run: bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/checks.sh)"
 
-      Sync_script:
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/sync.sh)"
+      - name: Sync_script
+        run: bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/sync.sh)"
 
-      Build_script:
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/build.sh)"
+      - name: Build_script
+        run: bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/build.sh)"
 
-      Upload_script:
-      - export TIMEOUT=43200 # Link timeout (in minutes)
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/upload.sh)"
+      -name: Upload_script
+       run: |
+          export TIMEOUT=43200 # Link timeout (in minutes)
+          bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/upload.sh)"
