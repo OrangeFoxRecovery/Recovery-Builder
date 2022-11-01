@@ -13,7 +13,6 @@ environment:
 
 jobs:
   build:
-    shell: /bin/bash -eo pipefail
     machine:
       image: ubuntu-2204:2022.10.1
     resource_class: medium
