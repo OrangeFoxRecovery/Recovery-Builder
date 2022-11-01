@@ -21,16 +21,16 @@ jobs:
      
      - checkout
       
-      - run: 
-          command: bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/checks.sh)"
+     - run: 
+         command: bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/checks.sh)"
 
-       - run: 
-           command: bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/sync.sh)"
+     - run: 
+         command: bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/sync.sh)"
 
-       - run: 
-           command: bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/build.sh)"
+     - run: 
+         command: bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/build.sh)"
 
-       - run:
-           command: |
-                 export TIMEOUT=43200 # Link timeout (in minutes)
-                 bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/upload.sh)"
+     - run:
+         command: |
+               export TIMEOUT=43200 # Link timeout (in minutes)
+               bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/upload.sh)"
