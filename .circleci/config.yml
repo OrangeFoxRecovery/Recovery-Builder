@@ -15,7 +15,7 @@ jobs:
   build:
     shell: /bin/bash -eo pipefail
     docker:
-      - image: cimg/base:2022.10
+      - image: ghcr.io/sushrut1101/docker:arch
     resource_class: medium
     steps:
       - checkout
