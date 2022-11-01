@@ -1,7 +1,6 @@
 version: 2.1
 
 jobs:
-  build:
   machine:
       image: ubuntu-2204:2022.10.1
     resource_class: large
