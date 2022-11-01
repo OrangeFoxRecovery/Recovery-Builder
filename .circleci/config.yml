@@ -1,6 +1,6 @@
 version: 2.1
 
-env:
+environment:
     # OrangeFox Sync Repository
     FOX_SYNC: https://gitlab.com/OrangeFox/sync.git
 
@@ -19,6 +19,15 @@ jobs:
     resource_class: medium
     steps:
       - checkout
-      # Whatever you want to do
-      - run: sudo apt-get update && sudo apt-get install -y cowsay
-      - run: cowsay Continuous Integration Rocks!
+      Checks_script:
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/checks.sh)"
+
+      Sync_script:
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/sync.sh)"
+
+      Build_script:
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/build.sh)"
+
+      Upload_script:
+      - export TIMEOUT=43200 # Link timeout (in minutes)
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/upload.sh)"
