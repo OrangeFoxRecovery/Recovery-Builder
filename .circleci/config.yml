@@ -1,9 +1,11 @@
 version: 2.1
 
+version: 2.1
+
 jobs:
   build:
-    machine:
-      image: ubuntu-2204:2022.10.1
+    docker:
+      - image: ghcr.io/sushrut1101/docker:arch
     resource_class: large
     environment:
       # OrangeFox Sync Repository
@@ -20,18 +22,18 @@ jobs:
     
     - run:
          name: Checks_script
-         command: curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/checks.sh | bash
+         command: curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/main/scripts/checks.sh | bash
      
     - run:
         name: Sync_script
-        command: curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/sync.sh | bash
+        command: curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/main/scripts/sync.sh | bash
      
     - run:
         name: Build_script
-        command: curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/build.sh | bash
+        command: curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/main/scripts/build.sh | bash
      
     - run:
         name: Upload_script
         command: |
               export TIMEOUT=43200 # Link timeout (in minutes)
-              curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/fox/scripts/upload.sh | bash
+              curl -sL https://raw.githubusercontent.com/Diwas1111/OrangeFox-CI/main/scripts/upload.sh | bash
