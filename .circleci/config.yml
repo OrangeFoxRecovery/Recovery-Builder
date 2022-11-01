@@ -2,8 +2,8 @@ version: 2.1
 
 jobs:
   build:
-    docker:
-      - image: ghcr.io/sushrut1101/docker:arch
+  machine:
+      image: ubuntu-2204:2022.10.1
     resource_class: large
     environment:
       # OrangeFox Sync Repository
