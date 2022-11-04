@@ -2,10 +2,10 @@
 
 # Device
 export FOX_BRANCH="fox_10.0"
-export DT_LINK="https://github.com/setup-co/recovery-device-xiaomi-viva -b A-11"
+export DT_LINK="https://github.com/setup-co/recovery-device-redmi-viva -b twrp"
 
 export DEVICE="viva"
-export OEM="redmii"
+export OEM="redmi"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
@@ -22,7 +22,7 @@ DEPS=(
 )
 
 # Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=Sushrut1101"
+export EXTRA_CMD="export OF_MAINTAINER=Setup-co"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
