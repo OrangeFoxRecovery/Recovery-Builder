@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_10.0"
+export FOX_BRANCH="fox_11.0"
 export DT_LINK="https://github.com/setup-co/recovery-device-redmi-viva -b twrp"
 
 export DEVICE="viva"
