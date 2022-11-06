@@ -7,7 +7,7 @@ export DT_LINK="https://github.com/begonia-recovery/twrp_device_xiaomi_begonia"
 export DEVICE="begonia"
 export OEM="xiaomi"
 
-# Build Target
+# Build Targe
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
 ## "bootimage" - for A/B devices without recovery partition (and without vendor boot)
 ## "vendorbootimage" - for devices Using vendor boot for the recovery ramdisk (Usually for devices shipped with Android 12 or higher)
