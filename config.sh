@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/setup-co/recovery-device-redmi-viva -b twrp"
+export DT_LINK="https://github.com/setup-co/recovery-device-redmi-viva -b A-11"
 
 export DEVICE="viva"
 export OEM="redmi"
