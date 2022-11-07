@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/edenefrii77/recovery-viva -b A-11"
+export DT_LINK="https://github.com/xiaomi-mt6781-devs/recovery_device_xiaomi_viva -b 12.1"
 
 export DEVICE="viva"
 export OEM="xiaomi"
