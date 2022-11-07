@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_12.1"
+export FOX_BRANCH="fox_11.0"
 export DT_LINK="https://github.com/edenefrii77/recovery-viva -b A-12"
 
 export DEVICE="viva"
@@ -34,4 +34,5 @@ export USE_CCACHE=1
 export CCACHE_SIZE="50G"
 export CCACHE_DIR="$HOME/work/.ccache"
 export J_VAL=16
+
 
