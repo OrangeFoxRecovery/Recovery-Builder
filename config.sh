@@ -36,5 +36,3 @@ export CCACHE_DIR="$HOME/work/.ccache"
 export J_VAL=16
 
 
-
-
