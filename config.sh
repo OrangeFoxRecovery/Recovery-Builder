@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export FOX_BRANCH="android-12.1"
+export DT_LINK="https://github.com/RedmiNote10S/recovery_device_redmi_rosemary.git -b android-12.1"
 
-export DEVICE="beryllium"
-export OEM="xiaomi"
+export DEVICE="rosemary"
+export OEM="redmi"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
