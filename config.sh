@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_8.1"
-export DT_LINK="https://gitlab.com/ultrakineticvelocity1/android_device_vipro_L2.git -b fox_8.1"
+export DT_LINK="https://github.com/UltraKineticVelocity/android_device_vipro_L2.git -b fox_8.1"
 
 export DEVICE="L2"
 export OEM="vipro"
