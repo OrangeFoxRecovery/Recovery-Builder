@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://github.com/Velosh/android_device_samsung_a50dd -b fox-9.0"
+export DT_LINK="https://github.com/Velosh/android_device_samsung_a50dd.git -b fox-9.0"
 
 export DEVICE="a50dd"
 export OEM="samsung"
