@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_12.1_"
+export FOX_BRANCH="fox_12.1_Q"
 export DT_LINK="https://gitlab.com/OrangeFox/device/garden.git -b fox_12.1_Q"
 
 export DEVICE="garden"
