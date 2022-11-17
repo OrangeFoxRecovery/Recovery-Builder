@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export FOX_BRANCH="fox_12.1_Q"
+export DT_LINK="https://gitlab.com/OrangeFox/device/garden.git -b fox_12.1_Q"
 
-export DEVICE="beryllium"
+export DEVICE="garden"
 export OEM="xiaomi"
 
 # Build Target
@@ -15,14 +15,10 @@ export TARGET="recoveryimage"
 
 export OUTPUT="OrangeFox*.zip"
 
-# Additional Dependencies (eg: Kernel Source)
-# Format: "repo dest"
-DEPS=(
-    "https://github.com/OrangeFoxRecovery/Avatar.git misc"
-)
+
 
 # Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=Sushrut1101"
+export EXTRA_CMD="export OF_MAINTAINER=Adarsh956"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
