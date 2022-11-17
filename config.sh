@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/efri77/viva6781 -b A12"
+export DT_LINK="https://github.com/efri77/Twrp-xiaomi-viva -b A12"
 
 export DEVICE="viva"
 export OEM="xiaomi"
@@ -22,7 +22,7 @@ DEPS=(
 )
 
 # Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=Sushrut1101"
+export EXTRA_CMD="export OF_MAINTAINER=efri77"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
