@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/ebluees/Mt6781 -b fox_11.0"
+export DT_LINK="https://github.com/ebluees/Mt6781 -b A12"
 
 export DEVICE="viva"
 export OEM="xiaomi"
