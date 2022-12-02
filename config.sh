@@ -2,10 +2,10 @@
 
 # Device
 export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/ebluees/Mt6781 -b A12"
+export DT_LINK="https://github.com/ebluees/Recovery -b ofox"
 
 export DEVICE="viva"
-export OEM="xiaomi"
+export OEM="redmi"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
@@ -34,5 +34,3 @@ export USE_CCACHE=1
 export CCACHE_SIZE="50G"
 export CCACHE_DIR="$HOME/work/.ccache"
 export J_VAL=16
-
-
