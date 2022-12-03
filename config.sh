@@ -5,7 +5,7 @@ export FOX_BRANCH="fox_11.0"
 export DT_LINK="https://github.com/ebluees/Recovery -b ofox"
 
 export DEVICE="viva"
-export OEM="redmi"
+export OEM="xiaomi"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
