@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_12.1"
+export FOX_BRANCH="fox_11.0"
 export DT_LINK="https://github.com/rizalef57/device_xiaomi_viva-twrp.git -b fox_12.1"
 
 export DEVICE="beryllium"
@@ -22,7 +22,7 @@ DEPS=(
 )
 
 # Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=Sushrut1101"
+export EXTRA_CMD="export OF_MAINTAINER=RizalEf"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
