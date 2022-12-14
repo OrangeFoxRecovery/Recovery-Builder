@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/rizalef7/mt6781_dev.git -b twrp-12.1"
+export FOX_BRANCH="fox_11.0"
+export DT_LINK="https://github.com/rizalef7/devices_xiaomi_viva-twrp.git -b fox_12.1"
 
 export DEVICE="viva"
 export OEM="xiaomi"
