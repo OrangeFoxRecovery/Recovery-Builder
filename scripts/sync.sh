@@ -33,7 +33,7 @@ if [ -z "$SYNC_BRANCH" ]; then
 fi
 
 # Sync the Sources
-./orangefox_sync.sh --branch $SYNC_BRANCH --path $SYNC_PATH || { echo "ERROR: Failed to Sync OrangeFox Sources!" && exit 1; }
+bash orangefox_sync.sh --branch $SYNC_BRANCH --path $SYNC_PATH || { echo "ERROR: Failed to Sync OrangeFox Sources!" && exit 1; }
 
 # Change to the Source Directory
 cd $SYNC_PATH
@@ -54,7 +54,7 @@ git clone $DT_LINK $DT_PATH || { echo "ERROR: Failed to Clone the Device Trees!"
 
 # Clone Additional Dependencies (Specified by the user)
 for dep in "${DEPS[@]}"; do
-	rm -rf $dep
+	rm -rf $(echo $dep | sed 's/ -b / /g')
 	git clone --depth=1 --single-branch $dep
 done
 
