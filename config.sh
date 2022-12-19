@@ -2,10 +2,10 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/eblues57/rec_device_redmi_viva.git -b fox_12.1"
+export DT_LINK="https://github.com/eblues57/device_xiaomi_viva-REC.git -b fox_12.1"
 
 export DEVICE="viva"
-export OEM="redmi"
+export OEM="xiaomi"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
