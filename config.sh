@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/eblues57/device_xiaomi_viva-REC.git -b A12.1"
+export DT_LINK="https://github.com/eblues57/twrp_viva_mt6781.git -b A12.1"
 
 export DEVICE="viva"
 export OEM="xiaomi"
