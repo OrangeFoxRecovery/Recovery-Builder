@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/eblues57/viva_mt6781-recovery.git -b A12.1"
+export DT_LINK="https://github.com/RizalEf75/device_xiaomi_viva-OFOX.git -b A12.1"
 
 export DEVICE="viva"
 export OEM="xiaomi"
@@ -18,7 +18,7 @@ export OUTPUT="OrangeFox*.zip"
 # Additional Dependencies (eg: Kernel Source)
 # Format: "repo dest"
 DEPS=(
-    "https://github.com/OrangeFoxRecovery/Avatar.git misc"
+    "https://github.com/RizalEf75/avatar.git misc"
 )
 
 # Extra Command
