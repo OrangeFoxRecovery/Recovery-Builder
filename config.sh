@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="oneplus/sm8150_s_12.1_op7pro"
-export DT_LINK="https://github.com/whitehatpiratephreak/android_kernel_oneplus_sm8150.git -b oneplus/sm8150_s_12.1_op7pro"
+export FOX_BRANCH="main"
+export DT_LINK="https://github.com/Invernomut0/android_device_oneplus_guacamole_unified_ORANGEFOX.git -b main"
 
 export DEVICE="guacamole"
 export OEM="Oneplus"
@@ -18,11 +18,11 @@ export OUTPUT="OrangeFox*.zip"
 # Additional Dependencies (eg: Kernel Source)
 # Format: "repo dest"
 DEPS=(
-    "https://github.com/OrangeFoxRecovery/Avatar.git misc"
+    "https://github.com/whitehatpiratephreak/android_kernel_oneplus_sm8150.git oneplus/sm8150_s_12.1_op7pro"
 )
 
 # Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=Sushrut1101"
+export EXTRA_CMD="export OF_MAINTAINER=whitehatpiratephreak"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
