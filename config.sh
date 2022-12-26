@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="master"
-export DT_LINK="https://github.com/Invernomut0/OrangeFox-DualBoot-Guac-Unified.git -b master"
+export FOX_BRANCH="oneplus/sm8150_s_12.1_op7pro"
+export DT_LINK="https://github.com/whitehatpiratephreak/android_kernel_oneplus_sm8150.git -b oneplus/sm8150_s_12.1_op7pro"
 
 export DEVICE="guacamole"
 export OEM="Oneplus"
@@ -18,7 +18,7 @@ export OUTPUT="OrangeFox*.zip"
 # Additional Dependencies (eg: Kernel Source)
 # Format: "repo dest"
 DEPS=(
-    "https://github.com/whitehatpiratephreak/android_kernel_oneplus_sm8150.git misc"
+    "https://github.com/OrangeFoxRecovery/Avatar.git misc"
 )
 
 # Extra Command
