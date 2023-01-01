@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_12.0"
-export DT_LINK="https://gitlab.com/OrangeFox/build/make.git -b fox_12.0"
+export FOX_BRANCH="fox_11.1"
+export DT_LINK="https://gitlab.com/OrangeFox/build/make.git -b fox_11.1"
 
 export DEVICE="REL"
 export OEM="Ulefone"
