@@ -4,7 +4,7 @@
 export FOX_BRANCH="fox_11.1"
 export DT_LINK="https://gitlab.com/OrangeFox/build/make.git -b fox_11.1"
 
-export DEVICE="REL"
+export DEVICE="Power Armor14 Pro"
 export OEM="Ulefone"
 
 # Build Target
