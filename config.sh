@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/RizalEf75/device_xiaomi_evergo.git -b fox_12.1"
+export DT_LINK="https://github.com/RizalEf75/MOAI.git -b fox_12.1"
 
 export DEVICE="viva"
 export OEM="xiaomi"
