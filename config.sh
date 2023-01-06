@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/DurkaFlurk/android_device_REL.git -b fox_12.1"
+export DT_LINK="https://github.com/DurkaFlurk/android_device_REL.git -b main"
 
 export DEVICE="Power_Armor14_Pro"
 export OEM="Ulefone"
