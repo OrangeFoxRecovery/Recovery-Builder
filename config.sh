@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/DurkaFlurk/android_device_REL.git -b main"
+export DT_LINK="https://github.com/DurkaFlurk/android_device_Power_Armor14_Pro.git -b main"
 
 export DEVICE="Power_Armor14_Pro"
 export OEM="Ulefone"
@@ -18,7 +18,7 @@ export OUTPUT="OrangeFox*.zip"
 # Additional Dependencies (eg: Kernel Source)
 # Format: "repo dest"
 DEPS=(
-    "https://github.com/DurkaFlurk/Power_Armor14_Pro-Kernel.git")
+    "https://github.com/OrangeFoxRecovery/Avatar.git misc")
 
 # Extra Command
 export EXTRA_CMD="export OF_MAINTAINER=DurkaFlurk"
