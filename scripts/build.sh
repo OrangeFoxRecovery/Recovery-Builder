@@ -27,7 +27,7 @@ else
 fi
 
 # Empty the VTS Makefile
-if [ "$FOX_BRANCH" = "fox_11.0" ]; then
+if [ "$FOX_BRANCH" = "fox_12.1" ]; then
     rm -rf frameworks/base/core/xsd/vts/Android.mk
     touch frameworks/base/core/xsd/vts/Android.mk 2>/dev/null || echo
 fi
