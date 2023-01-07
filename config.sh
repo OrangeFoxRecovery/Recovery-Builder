@@ -18,8 +18,7 @@ export OUTPUT="OrangeFox*.zip"
 # Additional Dependencies (eg: Kernel Source)
 # Format: "repo dest"
 DEPS=(
-    "https://github.com/OrangeFoxRecovery/Avatar.git misc"
-)
+    "https://github.com/DurkaFlurk/Power_Armor14_Pro-Kernel.git")
 
 # Extra Command
 export EXTRA_CMD="export OF_MAINTAINER=DurkaFlurk"
