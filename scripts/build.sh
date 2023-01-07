@@ -67,7 +67,7 @@ if [ -z "$FOX_BUILD_TYPE" ]; then
 fi
 
 # Default Maintainer's Name
-[ -z "$OF_MAINTAINER" ] && export OF_MAINTAINER="Unknown"
+[ -z "$OF_MAINTAINER" ] && export OF_MAINTAINER="DurkaFlurk"
 
 # Set BRANCH_INT variable for future use
 BRANCH_INT=$(echo $SYNC_BRANCH | cut -d. -f1)
