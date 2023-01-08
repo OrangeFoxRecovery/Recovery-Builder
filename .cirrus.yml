@@ -1,34 +1,223 @@
+
 env:
-    # OrangeFox Sync Repository
-    FOX_SYNC: https://gitlab.com/OrangeFox/sync.git
 
-    # Config
-    CONFIG: config.sh
+    MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-10.0-deprecated
 
-    # Telegram
-    TG_CHAT_ID: ENCRYPTED[0003e1cf5276424a5b2afb8c6a39f2d830864e8555b37220bd3bf173f3ef5b8769ab98425d96a76adf64b18241c940dd]
-    TG_TOKEN: ENCRYPTED[03de4105db5d23ec42490965c0a0f79217c1e3366cb152bd9d9a045e22586eba675615e1f08bf1aea3e860d499efde60]
+    DT_LINK: https://github.com/TeamWin/android_device_samsung_gtaxllte.git -b fox_10.0
 
-    # Cirrus Specific Vars (Do *NOT* Change)
-    CIRRUS_SHELL: bash
+    DEVICE: gtaxllte
+
+    OEM: samsung
+
+    DT_PATH: device/$OEM/$DEVICE
+
+    TARGET: recoveryimage
+
+    EXTRA_CMD: git clone https://github.com/OrangeFoxRecovery/Avatar.git misc
+
+    OUTPUT: OrangeFox*.zip 
 
 task:
-  name: "Recovery Build"
-  timeout_in: 120m
-  container:
-      image: ghcr.io/sushrut1101/docker:arch
-      cpu: 8
-      memory: 20G
 
-  Checks_script:
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/checks.sh)"
+  name: "Setting Up, Syncing, Building and Uploading..."
+
+  timeout_in: 240m  
+
+  container:
+
+      image: ubuntu:20.04
+
+      cpu: 8
+
+      memory: 32G
+
+  
+
+  Build-Env-Setup_script:
+
+       - export DEBIAN_FRONTEND=noninteractive
+
+       - apt update
+
+       - apt install sudo
+
+       - df -h
+
+       - DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata
+
+       - ln -sf /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
+
+       - apt-get install -y tzdata
+
+       - dpkg-reconfigure --frontend noninteractive tzdata
+
+       - sudo apt update -y && sudo apt install git aria2 curl wget rsync zip unzip lzma cpio ccache neofetch -y
+
+       - sudo apt install python2 -y
+
+       - sudo ln -sf /usr/bin/python2 /usr/bin/python
+
+       - git config --global user.name "Sushrut1101"
+
+       - git config --global user.email "guptasushrut@gmail.com"
+
+       - git clone https://github.com/akhilnarang/scripts.git ~/scripts
+
+       - cd ~/scripts
+
+       - sudo bash setup/android_build_env.sh
+
+       - cd ~
+
+  
+
+  Neofetch_script:
+
+       - neofetch
+
+  
+
+  Storage-Checker_script:
+
+      - df -h
+
+      - lsblk
+
+      - ls -l -a -h
+
+  
 
   Sync_script:
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/sync.sh)"
+
+      - echo "============================"
+
+      - echo "Syncing The Sources..."
+
+      - echo "============================"
+
+      - mkdir -p ~/work
+
+      - cd ~/work
+
+      - repo init --depth=1 -u $MANIFEST 
+
+      - repo sync -j16 --force-sync --no-tags --no-clone-bundle
+
+      - git clone $DT_LINK $DT_PATH
+
+      - echo "============================"
+
+      - echo "Syncing Complete!"
+
+      - echo "============================"
+
+  
+
+  fox-10-setup_script:
+
+      - cd ~/work
+
+      - cd build
+
+      - wget https://gitlab.com/OrangeFox/sync/-/raw/master/patches/patch-manifest-fox_10.0.diff
+
+      - patch -p1 < patch-manifest-fox_10.0.diff
+
+      - rm -rf patch-manifest-fox_10.0.diff
+
+      - cd -
+
+      - rm -rf bootable/recovery vendor/recovery
+
+      - git clone https://gitlab.com/OrangeFox/bootable/Recovery.git -b fox_10.0 bootable/recovery
+
+      - git clone https://gitlab.com/OrangeFox/vendor/recovery.git -b fox_10.0 vendor/recovery
+
+  
+
+  Clone-OrangeFox-Theme_script:
+
+      - git clone https://gitlab.com/OrangeFox/misc/Theme.git ~/work/bootable/recovery/gui/theme
+
+  
+
+  Clone-QCOM-Stuff_script:
+
+      - cd ~/work
+
+      - git clone https://github.com/TeamWin/android_device_qcom_twrp-common.git -b android-10 device/qcom/twrp-common
+
+      - git clone https://github.com/TeamWin/android_device_qcom_common.git -b android-10 device/qcom/common
+
+  
 
   Build_script:
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/build.sh)"
+
+      - echo "============================"
+
+      - echo "Starting the Build..."
+
+      - echo "============================"
+
+      - cd ~/work
+
+      - export ALLOW_MISSING_DEPENDENCIES=true
+
+      - export LC_ALL="C"
+
+      - export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
+
+      - $EXTRA_CMD
+
+      - export USE_CCACHE=1
+
+      - export CCACHE_EXEC=/usr/bin/ccache
+
+      - ccache -M 50G
+
+      - . build/envsetup.sh
+
+      - . $DT_PATH/vendorsetup.sh
+
+      - lunch omni_$DEVICE-eng
+
+      - mka -j16 $TARGET
+
+     
 
   Upload_script:
-      - export TIMEOUT=43200 # Link timeout (in minutes)
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/upload.sh)"
+
+      - echo "============================"
+
+      - echo "Uploading the Build..."
+
+      - echo "============================"
+
+      - cd ~/work
+
+      - cd out/target/product/"$DEVICE"
+
+      - ls -lh
+
+      - pwd
+
+      - chmod 777 *
+
+      - curl --upload-file $(echo $OUTPUT) https://transfer.sh | tee link.txt && echo " "
+
+      - echo " "
+
+      - echo "============================"
+
+      - echo "Build Uploaded!"
+
+      - echo "Please see the link Below-  "
+
+      - echo "----------------------------"
+
+      - cat link.txt && echo " "
+
+      - echo "============================"
+
+        
+
