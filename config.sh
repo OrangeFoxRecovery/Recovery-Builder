@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/camellian-devs/recovery_device_xiaomi_camellia.git -b android-12.1"
+export DT_LINK="https://github.com/camellian-devs/recovery_device_xiaomi_camellia -b android-12.1"
 
 export DEVICE="camellia"
 export OEM="xiaomi"
