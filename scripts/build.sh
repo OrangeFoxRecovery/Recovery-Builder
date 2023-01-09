@@ -86,9 +86,9 @@ fi
 
 # lunch the target
 if [ "$BRANCH_INT" -ge 11 ]; then
-    lunch omni_${DEVICE}-eng || { echo "ERROR: Failed to lunch the target!" && exit 1; }
-else
-    lunch omni_${DEVICE}-eng || { echo "ERROR: Failed to lunch the target!" && exit 1; }
+    lunch twrp_Power_Armor14_Pro-eng || { echo "ERROR: Failed to lunch the target!" && exit 1; }
+elsej
+    lunch twrp_Power_Armor14_Pro-eng || { echo "ERROR: Failed to lunch the target!" && exit 1; }
 fi
 
 # Build the Code
