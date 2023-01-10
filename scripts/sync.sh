@@ -33,7 +33,7 @@ if [ -z "$SYNC_BRANCH" ]; then
 fi
 
 # Sync the Sources
-bash orangefox_sync.sh --branch $SYNC_BRANCH --path $SYNC_PATH || { echo "ERROR: Failed to Sync OrangeFox Sources!" && exit 1; }
+bash orangefox_sync.sh --branch 12.1 ~/OrangeFox/12.1 || { echo "ERROR: Failed to Sync OrangeFox Sources!" && exit 1; }
 
 # Change to the Source Directory
 cd $SYNC_PATH
