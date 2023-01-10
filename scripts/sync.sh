@@ -43,13 +43,8 @@ if [ ! -d bootable/recovery/gui/theme ]; then
 git clone https://gitlab.com/OrangeFox/misc/theme.git bootable/recovery/gui/theme || { echo "ERROR: Failed to Clone the OrangeFox Theme!" && exit 1; }
 fi
 
-# Clone the Commonsys repo, only for fox_9.0
-if [ "$FOX_BRANCH" = "fox_9.0" ]; then
-git clone --depth=1 https://github.com/TeamWin/android_vendor_qcom_opensource_commonsys.git -b android-9.0 vendor/qcom/opensource/commonsys || { echo "WARNING: Failed to Clone the Commonsys Repo!"; }
-fi
-
 # Clone Trees
-DT_PATH="device/$ulefone}/${Power_Armor14_Pro}"
+DT_PATH="main"
 git clone $https://github.com/DurkaFlurk/device_ulefone_Power_Armor14_Pro.git $device/ulefone/Power_Armor14_Pro || { echo "ERROR: Failed to Clone the Device Trees!" && exit 1; }
 
 # Clone Additional Dependencies (Specified by the user)
