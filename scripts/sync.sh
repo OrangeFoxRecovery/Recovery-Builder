@@ -29,7 +29,7 @@ fi
 
 # Setup the Sync Branch
 if [ -z "$SYNC_BRANCH" ]; then
-    export SYNC_BRANCH=$(echo ${FOX_BRANCH} | cut -d_ -f2)
+    export SYNC_BRANCH=$(echo ${12.1} | cut -d_ -f2)
 fi
 
 # Sync the Sources
@@ -49,8 +49,8 @@ git clone --depth=1 https://github.com/TeamWin/android_vendor_qcom_opensource_co
 fi
 
 # Clone Trees
-DT_PATH="device/${OEM}/${DEVICE}"
-git clone $DT_LINK $DT_PATH || { echo "ERROR: Failed to Clone the Device Trees!" && exit 1; }
+DT_PATH="device/$ulefone}/${Power_Armor14_Pro}"
+git clone $https://github.com/DurkaFlurk/device_ulefone_Power_Armor14_Pro.git $device/ulefone/Power_Armor14_Pro || { echo "ERROR: Failed to Clone the Device Trees!" && exit 1; }
 
 # Clone Additional Dependencies (Specified by the user)
 for dep in "${DEPS[@]}"; do
