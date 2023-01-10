@@ -23,7 +23,7 @@ echo "Uploading the Build..."
 echo "============================"
 
 # Change to the Output Directory
-cd out/target/product/${DEVICE}
+cd out/target/product/${Power_Armor14_Pro}
 
 # Set FILENAME var
 FILENAME=$(echo $OUTPUT)
