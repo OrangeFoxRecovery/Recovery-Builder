@@ -45,7 +45,7 @@ fi
 
 # Clone Trees
 DT_PATH="/device/ulefone/Power_Armor14_Pro
-git clone https://github.com/DurkaFlurk/device_ulefone_Power_Armor14_Pro.git $device/ulefone/Power_Armor14_Pro || { echo "ERROR: Failed to Clone the Device Trees!" && exit 1; }
+git clone https://github.com/Durkaflurks/device_ulefone_Power_Armor14_Pro/tree/mainmain/ulefone/Power_Armor14_Pro $device/ulefone/Power_Armor14_Pro || { echo "ERROR: Failed to Clone the Device Trees!" && exit 1; }
 
 # Clone Additional Dependencies (Specified by the user)
 for dep in "${DEPS[@]}"; do
