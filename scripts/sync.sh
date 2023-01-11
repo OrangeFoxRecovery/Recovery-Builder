@@ -44,8 +44,8 @@ git clone https://gitlab.com/OrangeFox/misc/theme.git bootable/recovery/gui/them
 fi
 
 # Clone Trees
-DT_PATH="main"
-git clone $https://github.com/DurkaFlurk/device_ulefone_Power_Armor14_Pro.git $device/ulefone/Power_Armor14_Pro || { echo "ERROR: Failed to Clone the Device Trees!" && exit 1; }
+DT_PATH="/device/ulefone/Power_Armor14_Pro
+git clone https://github.com/DurkaFlurk/device_ulefone_Power_Armor14_Pro.git $device/ulefone/Power_Armor14_Pro || { echo "ERROR: Failed to Clone the Device Trees!" && exit 1; }
 
 # Clone Additional Dependencies (Specified by the user)
 for dep in "${DEPS[@]}"; do
