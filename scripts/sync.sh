@@ -45,13 +45,12 @@ fi
 
 # Clone Trees
 DT_PATH="/device/ulefone/Power_Armor14_Pro
-git clone https://github.com/DurkaFlurk/android_device_Power_Armor14_Pro.git $device/ulefone/Power_Armor14_Pro || { echo "ERROR: Failed to Clone the Device Trees!" && exit 1; }
+git clone https://github.com/DurkaFlurk/android_device_Power_Armor14_Pro.git $/device/ulefone/Power_Armor14_Pro || { echo "ERROR: Failed to Clone the Device Trees!" && exit 1; }
 
 # Clone Additional Dependencies (Specified by the user)
 for dep in "${DEPS[@]}"; do
 	rm -rf $(echo $dep | sed 's/ -b / /g')
 	git clone --depth=1 --single-branch $dep
-done
 
 # Magisk
 if [[ $OF_USE_LATEST_MAGISK = "true" || $OF_USE_LATEST_MAGISK = "1" ]]; then
