@@ -21,7 +21,7 @@ task:
       memory: 20G
 
   Checks_script:
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/main/scripts/checks.sh)"
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/DurkaFlurk/OrangeFox-CI/main/scripts/checks.sh)"
 
   Sync_script:
       - bash -c "$(curl -sL https://raw.githubusercontent.com/DurkaFlurk/OrangeFox-CI/main/scripts/sync.sh)"
