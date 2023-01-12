@@ -28,7 +28,7 @@ elif [ "$FOX_BRANCH" = "fox_8.0" ]; then
 fi
 
 # Setup the Sync Branch
-if [ -z "$SYNC_BRANCH" ]; then
+if [ -z "fox_12.1" ]; then
     export SYNC_BRANCH=$(echo ${12.1} | cut -d_ -f2)
 fi
 
@@ -36,16 +36,16 @@ fi
 bash orangefox_sync.sh --branch 12.1 ~/OrangeFox/12.1 || { echo "ERROR: Failed to Sync OrangeFox Sources!" && exit 1; }
 
 # Change to the Source Directory
-cd $SYNC_PATH
+cd ~/OrangeFox/12.1
 
 # Clone the theme if not already present
 if [ ! -d bootable/recovery/gui/theme ]; then
-git clone https://gitlab.com/OrangeFox/misc/theme.git bootable/recovery/gui/theme || { echo "ERROR: Failed to Clone the OrangeFox Theme!" && exit 1; }
+git clone https://gitlab.com/OrangeFox/misc/theme.git || { echo "ERROR: Failed to Clone the OrangeFox Theme!" && exit 1; }
 fi
 
 # Clone Trees
 DT_PATH="/device/ulefone/Power_Armor14_Pro
-git clone https://github.com/Durkaflurks/device_ulefone_Power_Armor14_Pro/tree/mainmain/ulefone/Power_Armor14_Pro $device/ulefone/Power_Armor14_Pro || { echo "ERROR: Failed to Clone the Device Trees!" && exit 1; }
+git clone https://github.com/DurkaFlurk/android_device_Power_Armor14_Pro.git $device/ulefone/Power_Armor14_Pro || { echo "ERROR: Failed to Clone the Device Trees!" && exit 1; }
 
 # Clone Additional Dependencies (Specified by the user)
 for dep in "${DEPS[@]}"; do
