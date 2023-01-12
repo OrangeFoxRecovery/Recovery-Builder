@@ -53,7 +53,7 @@ for dep in "${DEPS[@]}"; do
 	git clone --depth=1 --single-branch $dep
 
 # Magisk
-if [[ $OF_USE_LATEST_MAGISK = "true" || $OF_USE_LATEST_MAGISK = "1" ]]; then
+if [ $OF_USE_LATEST_MAGISK = "true" || $OF_USE_LATEST_MAGISK = "1" ]; then
 	echo "Downloading the Latest Release of Magisk..."
 	LATEST_MAGISK_URL="$(curl -sL https://api.github.com/repos/topjohnwu/Magisk/releases/latest | jq -r . | grep browser_download_url | grep Magisk- | cut -d : -f 2,3 | sed 's/"//g')"
 	mkdir -p ~/Magisk
@@ -65,7 +65,9 @@ if [[ $OF_USE_LATEST_MAGISK = "true" || $OF_USE_LATEST_MAGISK = "1" ]]; then
 	mv $("ls" Magisk*.apk) $("ls" Magisk*.apk | sed 's/.apk/.zip/g')
 	cd $SYNC_PATH >/dev/null
 	echo "Done!"
+
 fi
+
 
 # Exit
 exit 0
