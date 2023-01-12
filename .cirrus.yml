@@ -30,5 +30,5 @@ task:
       - bash -c "$(curl -sL https://raw.githubusercontent.com/DurkaFlurk/OrangeFox-CI/main/scripts/build.sh)"
 
   Upload_script:
-      - export TIMEOUT=43200 # Link timeout (in minutes)
+      - export TIMEOUT=43300 # Link timeout (in minutes)
       - bash -c "$(curl -sL https://raw.githubusercontent.com/DurkaFlurk/OrangeFox-CI/main/scripts/upload.sh)"
