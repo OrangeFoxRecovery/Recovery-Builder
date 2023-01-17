@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="git@github.com:lavender-q/device_lavender_ofox.git -b fox_12.1"
+export DT_LINK="https://github.com/lavender-q/device_lavender_ofox.git -b fox_12.1"
 
 export DEVICE="lavender"
 export OEM="xiaomi"
