@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/lavender-q/device_lavender_ofox.git -b fox_12.1"
+export DT_LINK="https://github.com/lavender-q/device_lavender_ofox -b fox_12.1"
 
 export DEVICE="lavender"
 export OEM="xiaomi"
@@ -22,7 +22,7 @@ DEPS=(
 )
 
 # Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=Prashant"
+export EXTRA_CMD="export OF_MAINTAINER=FbriChy"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
