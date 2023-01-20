@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/rizalef75/device_xiaomi_viva -b main"
+export DT_LINK="https://github.com/rizalef75/viva_test -b twelve"
 
 export DEVICE="viva"
 export OEM="xiaomi"
