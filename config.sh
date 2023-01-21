@@ -2,18 +2,18 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/DurkaFlurk/android_device_Power_Armor14_Pro.git -b main"
+export DT_LINK="https://github.com/DurkaFlurk/SM-T220-XAR_TWRP_devicetree.git"
 
-export DEVICE="Power_Armor14_Pro"
-export OEM="Ulefone"
+export DEVICE="gta7litewifi"
+export OEM="samsung"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
 ## "bootimage" - for A/B devices without recovery partition (and without vendor boot)
 ## "vendorbootimage" - for devices Using vendor boot for the recovery ramdisk (Usually for devices shipped with Android 12 or higher)
-export TARGET="bootimage"
+export TARGET="recoveryimage"
 
-export OUTPUT="OrangeFox*.zip"
+export OUTPUT="OrangeFoxgta7litewifi.zip"
 
 # Additional Dependencies (eg: Kernel Source)
 # Format: "repo dest"
