@@ -27,7 +27,7 @@ else
 fi
 
 # Empty the VTS Makefile
-if [ "$FOX_BRANCH" = "fox_11.0" ]; then
+if [ "$FOX_BRANCH" = "fox_12.1" ]; then
     rm -rf frameworks/base/core/xsd/vts/Android.mk
     touch frameworks/base/core/xsd/vts/Android.mk 2>/dev/null || echo
 fi
@@ -67,7 +67,7 @@ if [ -z "$FOX_BUILD_TYPE" ]; then
 fi
 
 # Default Maintainer's Name
-[ -z "$OF_MAINTAINER" ] && export OF_MAINTAINER="Unknown"
+[ -z "$OF_MAINTAINER" ] && export OF_MAINTAINER="DurkaFlurk"
 
 # Set BRANCH_INT variable for future use
 BRANCH_INT=$(echo $SYNC_BRANCH | cut -d. -f1)
@@ -86,9 +86,9 @@ fi
 
 # lunch the target
 if [ "$BRANCH_INT" -ge 11 ]; then
-    lunch twrp_${DEVICE}-eng || { echo "ERROR: Failed to lunch the target!" && exit 1; }
-else
-    lunch omni_${DEVICE}-eng || { echo "ERROR: Failed to lunch the target!" && exit 1; }
+    lunch twrp_Power_Armor14_Pro-eng || { echo "ERROR: Failed to lunch the target!" && exit 1; }
+elsej
+    lunch twrp_Power_Armor14_Pro-eng || { echo "ERROR: Failed to lunch the target!" && exit 1; }
 fi
 
 # Build the Code
