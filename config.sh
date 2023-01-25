@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/rizalef75/twrp_viva.git -b twelve"
+export FOX_BRANCH="fox_11.0"
+export DT_LINK="https://github.com/rizalef75/twrp_viva.git -b eleven"
 
 export DEVICE="viva"
 export OEM="xiaomi"
