@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://github.com/sekaiacg/android_device_xiaomi_vili_TWRP.git -b fox_9.0"
+export DT_LINK="https://github.com/sekaiacg/android_device_xiaomi_vili_TWRP.git -b fox_11.0"
 
 export DEVICE="vili"
 export OEM="xiaomi"
