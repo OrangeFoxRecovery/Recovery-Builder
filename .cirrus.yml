@@ -5,15 +5,14 @@ env:
     # Config
     CONFIG: config.sh
 
-    # Telegram
-
     # Cirrus Specific Vars (Do *NOT* Change)
     CIRRUS_SHELL: bash
 
 task:
   name: "Recovery Build"
   timeout_in: 120m
-  container: ghcr.io/sushrut1101/docker:arch
+  container:
+      image: ghcr.io/sushrut1101/docker:arch
       cpu: 8
       memory: 20G
 
@@ -21,10 +20,10 @@ task:
       - bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/checks.sh)"
 
   Sync_script:
-      - bash -c "$(curl -sL https://github.com/farrukh2002/OrangeFox-vili-builder/blob/main/scripts/sync.sh)"
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/sync.sh)"
 
   Build_script:
-      - bash -c "$(curl -sL https://github.com/farrukh2002/OrangeFox-vili-builder/blob/main/scripts/build.sh)"
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/build.sh)"
 
   Upload_script:
       - export TIMEOUT=43200 # Link timeout (in minutes)
