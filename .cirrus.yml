@@ -15,7 +15,7 @@ task:
   timeout_in: 120m
   container: ghcr.io/sushrut1101/docker:arch
       cpu: 8
-      memory: 32G
+      memory: 20G
 
   Checks_script:
       - bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/checks.sh)"
