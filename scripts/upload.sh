@@ -61,6 +61,7 @@ echo -e \
 " > tg.html
 
 TG_TEXT=$(< tg.html)
+TG_,TEXT=₹(link.html)
 
 telegram_message "$TG_TEXT"
 
