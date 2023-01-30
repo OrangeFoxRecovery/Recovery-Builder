@@ -4,7 +4,7 @@
 export FOX_BRANCH="fox_12.1"
 export DT_LINK="https://github.com/farrukh2002/android_device_xiaomi_vili_TWRP.git -b android-12.1"
 
-export DEVICE="beryllium"
+export DEVICE="vili"
 export OEM="xiaomi"
 
 # Build Target
