@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export FOX_BRANCH="main"
+export DT_LINK="https://github.com/mountain47/android_recovery_realme_RMX2193.git -b main"
 
-export DEVICE="beryllium"
-export OEM="xiaomi"
+export DEVICE="moon"
+export OEM="realme"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
