@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/farrukh2002/android_device_xiaomi_vili_TWRP.git -b android-12.1"
+export DT_LINK="https://github.com/farrukh2002/android_device_xiaomi_milahaina-pbrp.git -b android-12.1"
 
 export DEVICE="vili"
 export OEM="xiaomi"
@@ -11,15 +11,12 @@ export OEM="xiaomi"
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
 ## "bootimage" - for A/B devices without recovery partition (and without vendor boot)
 ## "vendorbootimage" - for devices Using vendor boot for the recovery ramdisk (Usually for devices shipped with Android 12 or higher)
-export TARGET="bootimage"
+export TARGET="vendorbootimage"
 
 export OUTPUT="OrangeFox*.zip"
 
 # Additional Dependencies (eg: Kernel Source)
 # Format: "repo dest"
-DEPS=(
-    "https://github.com/OrangeFoxRecovery/Avatar.git misc"
-)
 
 # Extra Command
 export EXTRA_CMD="export OF_MAINTAINER=Farrukh"
