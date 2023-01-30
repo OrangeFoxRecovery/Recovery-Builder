@@ -11,9 +11,9 @@ export OEM="xiaomi"
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
 ## "bootimage" - for A/B devices without recovery partition (and without vendor boot)
 ## "vendorbootimage" - for devices Using vendor boot for the recovery ramdisk (Usually for devices shipped with Android 12 or higher)
-export TARGET="bootimage"
+export TARGET="vendorbootimage"
 
-export OUTPUT="OrangeFox_vili*.zip"
+export OUTPUT="OrangeFox*.zip"
 
 # Additional Dependencies (eg: Kernel Source)
 # Format: "repo dest"
