@@ -50,7 +50,7 @@ fi
 
 # Clone Trees
 DT_PATH="device/${OEM}/${DEVICE}"
-git clone https://github.com/farrukh2002/android_device_xiaomi_milahaina-pbrp.git || { echo "ERROR: Failed to Clone the Device Trees!" && exit 1; }
+git clone https://github.com/farrukh2002/android_device_xiaomi_vili_TWRP.git || { echo "ERROR: Failed to Clone the Device Trees!" && exit 1; }
 
 # Clone Additional Dependencies (Specified by the user)
 for dep in "${DEPS[@]}"; do
