@@ -19,7 +19,7 @@ export OUTPUT="OrangeFox*.zip"
 
 # Format: "repo dest"
 DEPS=(
-    "https://github.com/OrangeFoxRecovery/Avatar.git misc"
+    "https://github.com/begonia-recovery/twrp_kernel_xiaomi_begonia.git -b twrp-12.1"
 )
 
 # Extra Command
