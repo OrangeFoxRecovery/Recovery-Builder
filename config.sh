@@ -5,7 +5,7 @@ export FOX_BRANCH="fox_12.1"
 export DT_LINK="https://github.com/begonia-recovery/twrp_device_xiaomi_begonia.git -b twrp-12.1"
 
 export DEVICE="begonia"
-export OEM="Xiaomi"
+export OEM="xiaomi"
 
 # Build Targe
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
