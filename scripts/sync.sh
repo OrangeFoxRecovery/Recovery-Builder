@@ -33,7 +33,7 @@ if [ -z "$SYNC_BRANCH" ]; then
 fi
 
 # Sync the Sources
-./orangefox_sync.sh --branch $SYNC_BRANCH --path $SYNC_PATH || { echo "ERROR: Failed to Sync OrangeFox Sources!" && exit 1; }
+bash orangefox_sync.sh --branch $SYNC_BRANCH --path $SYNC_PATH || { echo "ERROR: Failed to Sync OrangeFox Sources!" && exit 1; }
 
 # Change to the Source Directory
 cd $SYNC_PATH
@@ -49,11 +49,12 @@ git clone --depth=1 https://github.com/TeamWin/android_vendor_qcom_opensource_co
 fi
 
 # Clone Trees
+DT_PATH="device/${OEM}/${DEVICE}"
 git clone $DT_LINK $DT_PATH || { echo "ERROR: Failed to Clone the Device Trees!" && exit 1; }
 
 # Clone Additional Dependencies (Specified by the user)
 for dep in "${DEPS[@]}"; do
-	rm -rf $dep
+	rm -rf $(echo $dep | sed 's/ -b / /g')
 	git clone --depth=1 --single-branch $dep
 done
 
@@ -70,12 +71,6 @@ if [[ $OF_USE_LATEST_MAGISK = "true" || $OF_USE_LATEST_MAGISK = "1" ]]; then
 	mv $("ls" Magisk*.apk) $("ls" Magisk*.apk | sed 's/.apk/.zip/g')
 	cd $SYNC_PATH >/dev/null
 	echo "Done!"
-fi
-
-# Pick patches for fox_12.1
-if [ "${FOX_BRANCH}" = "fox_12.1" ]; then
-	git -C system/vold fetch https://gerrit.twrp.me/android_system_vold refs/changes/40/5540/7
-	git -C system/vold cherry-pick FETCH_HEAD
 fi
 
 # Exit
