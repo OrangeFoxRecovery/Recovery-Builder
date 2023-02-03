@@ -2,10 +2,10 @@
 
 # Device
 export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export DT_LINK="https://github.com/twrpdtgen/android_device_acer_AcerOne8T482L"
 
-export DEVICE="beryllium"
-export OEM="xiaomi"
+export DEVICE="AcerOne8T482L"
+export OEM="acer"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
@@ -22,7 +22,7 @@ DEPS=(
 )
 
 # Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=Sushrut1101"
+export EXTRA_CMD="export OF_MAINTAINER=himanshu"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
