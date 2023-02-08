@@ -22,7 +22,7 @@ DEPS=(
 )
 
 # Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=Redznn"
+export EXTRA_CMD="export OF_MAINTAINER=redznn"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
