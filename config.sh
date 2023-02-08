@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/rizalef77/recovery_device_viva.git -b twelve"
+export DT_LINK="https://github.com/rizalef77/device_xiaomi_viva-recovery.git -b twrp-12.1"
 
 export DEVICE="viva"
 export OEM="xiaomi"
@@ -34,4 +34,3 @@ export USE_CCACHE=1
 export CCACHE_SIZE="50G"
 export CCACHE_DIR="$HOME/work/.ccache"
 export J_VAL=16
-
