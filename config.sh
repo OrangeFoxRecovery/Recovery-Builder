@@ -2,16 +2,16 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/rizalef77/device_xiaomi_viva-recovery.git -b twrp-12.1"
+export DT_LINK="https://github.com/rizalef77/device_xiaomi_rock-recovery/tree/twrp-12.1/recovery/root -b twrp-12.1"
 
-export DEVICE="viva"
+export DEVICE="rock"
 export OEM="xiaomi"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
 ## "bootimage" - for A/B devices without recovery partition (and without vendor boot)
 ## "vendorbootimage" - for devices Using vendor boot for the recovery ramdisk (Usually for devices shipped with Android 12 or higher)
-export TARGET="bootimage"
+export TARGET="vendorbootimage"
 
 export OUTPUT="OrangeFox*.zip"
 
