@@ -21,14 +21,14 @@ task:
       memory: 20G
 
   Checks_script:
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/checks.sh)"
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/arkhfel/OrangeFox-CI/main/scripts/build.sh)"
 
   Sync_script:
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/sync.sh)"
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/arkhfel/OrangeFox-CI/main/sync.sh)"
 
   Build_script:
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/build.sh)"
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/arkhfel/OrangeFox-CI/main/scripts/build.sh)"
 
   Upload_script:
       - export TIMEOUT=43200 # Link timeout (in minutes)
-      - bash -c "$(curl -sL https://raw.githubusercontent.com/OrangeFoxRecovery/OrangeFox-CI/fox/scripts/upload.sh)"
+      - bash -c "$(curl -sL https://raw.githubusercontent.com/arkhfel/OrangeFox-CI/main/scripts/upload.sh)"
