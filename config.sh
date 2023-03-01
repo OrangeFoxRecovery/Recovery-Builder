@@ -28,7 +28,7 @@ export EXTRA_CMD="export OF_MAINTAINER=claud-wait"
 ## Use the Latest Release of Magisk for the OrangeFox addon
 export OF_USE_LATEST_MAGISK=true
 
-# Not Recommended to Change
+# Not Recommended to Change Ok
 export SYNC_PATH="$HOME/work" # Full (absolute) path.
 export USE_CCACHE=1
 export CCACHE_SIZE="50G"
