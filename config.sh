@@ -4,7 +4,7 @@
 export FOX_BRANCH="fox_12.1"
 export DT_LINK="https://github.com/d4fun/agate -b A12"
 
-export DEVICE="viva"
+export DEVICE="agate"
 export OEM="xiaomi"
 
 # Build Target
