@@ -35,15 +35,7 @@ fi
 # Send the Telegram Message
 
 echo -e \
-"
-🦊 OrangeFox Recovery CI
-
-✔️ The Build has been Triggered!
-
-📱 Device: "${DEVICE}"
-🖥 Build System: "${FOX_BRANCH}"
-🌲 Logs: <a href=\"https://cirrus-ci.com/build/${CIRRUS_BUILD_ID}\">Here</a>
-" > tg.html
+"Hello World!" > tg.html
 
 TG_TEXT=$(< tg.html)
 
