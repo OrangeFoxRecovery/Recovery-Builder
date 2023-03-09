@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/TeamWin/android_device_samsung_a52sxq"
+export DT_LINK="https://gitlab.com/OrangeFox/device/a52sxq.git"
 
 export DEVICE="a52sxq"
 export OEM="samsung"
@@ -22,7 +22,7 @@ DEPS=(
 )
 
 # Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=arixcuti:3"
+export EXTRA_CMD="export OF_MAINTAINER="ArixCuti<3"
 
 
 # Magisk
