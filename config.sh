@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/TeamWin/android_device_samsung_a52sxq -b fox_12.1"
+export DT_LINK="https://github.com/TeamWin/android_device_samsung_a52sxq"
 
 export DEVICE="a52sxq"
 export OEM="samsung"
