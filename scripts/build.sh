@@ -63,11 +63,11 @@ export LC_ALL="C"
 
 # Default Build Type
 if [ -z "$FOX_BUILD_TYPE" ]; then
-    export FOX_BUILD_TYPE="Unofficial-CI"
+    export FOX_BUILD_TYPE="Unofficial-XDA R12.1"
 fi
 
 # Default Maintainer's Name
-[ -z "$OF_MAINTAINER" ] && export OF_MAINTAINER="Unknown"
+[ -z "$OF_MAINTAINER" ] && export OF_MAINTAINER="ArixCutiS1tg<3"
 
 # Set BRANCH_INT variable for future use
 BRANCH_INT=$(echo $SYNC_BRANCH | cut -d. -f1)
