@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/d4fun/twrp -b fox12.1"
+export DT_LINK="https://github.com/d4fun/tviva.git -b 12"
 
 export DEVICE="viva"
 export OEM="xiaomi"
