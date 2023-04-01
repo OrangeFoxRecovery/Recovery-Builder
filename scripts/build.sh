@@ -19,12 +19,6 @@ if [ -z "$SYNC_BRANCH" ]; then
     export SYNC_BRANCH=$(echo ${FOX_BRANCH} | cut -d_ -f2)
 fi
 
-# Set-up ccache
-if [ -z "$CCACHE_SIZE" ]; then
-    ccache -M 10G
-else
-    ccache -M ${CCACHE_SIZE}
-fi
 
 # Empty the VTS Makefile
 if [ "$FOX_BRANCH" = "fox_11.0" ]; then

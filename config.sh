@@ -2,9 +2,9 @@
 
 # Device
 export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export DT_LINK="https://gitlab.com/OrangeFox/device/whyred -b fox_9.0"
 
-export DEVICE="beryllium"
+export DEVICE="whyred"
 export OEM="xiaomi"
 
 # Build Target
@@ -30,7 +30,4 @@ export OF_USE_LATEST_MAGISK=true
 
 # Not Recommended to Change
 export SYNC_PATH="$HOME/work" # Full (absolute) path.
-export USE_CCACHE=1
-export CCACHE_SIZE="50G"
-export CCACHE_DIR="$HOME/work/.ccache"
-export J_VAL=16
+#
