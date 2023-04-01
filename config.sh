@@ -2,9 +2,9 @@
 
 # Device
 export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export DT_LINK="https://gitlab.com/OrangeFox/device/whyred -b fox_9.0"
 
-export DEVICE="beryllium"
+export DEVICE="whyred"
 export OEM="xiaomi"
 
 # Build Target
