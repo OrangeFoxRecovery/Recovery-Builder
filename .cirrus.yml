@@ -17,7 +17,7 @@ task:
   timeout_in: 120m
   container:
       image: ghcr.io/sushrut1101/docker:arch
-      cpu: 2
+      cpu: 4
       memory: 8G
 
   Checks_script:
