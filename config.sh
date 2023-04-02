@@ -1,17 +1,17 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export FOX_BRANCH="fox_12.1"
+export DT_LINK="https://github.com/mmtrt/android_device_xiaomi_evergreen.git -b twrp-12.1"
 
-export DEVICE="beryllium"
+export DEVICE="evergreen"
 export OEM="xiaomi"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
 ## "bootimage" - for A/B devices without recovery partition (and without vendor boot)
 ## "vendorbootimage" - for devices Using vendor boot for the recovery ramdisk (Usually for devices shipped with Android 12 or higher)
-export TARGET="recoveryimage"
+export TARGET="bootimage"
 
 export OUTPUT="OrangeFox*.zip"
 
