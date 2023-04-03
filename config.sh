@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/SonicBSV/device_markw_twrp.git -b android-12.1"
+export DT_LINK="https://github.com/mozzaru/device_markw_twrp.git -b fox_12.1"
 
 export DEVICE="markw"
 export OEM="xiaomi"
