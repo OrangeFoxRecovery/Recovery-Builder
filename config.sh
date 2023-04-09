@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_12.1"
+export FOX_BRANCH="android-13.0"
 export DT_LINK="https://github.com/vherawidatama/android_device_xiaomi_taoyao-twrp.git -b android-13.0"
 
 export DEVICE="taoyao"
