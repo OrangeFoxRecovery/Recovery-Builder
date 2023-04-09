@@ -23,6 +23,7 @@ DEPS=(
 
 # Extra Command
 export EXTRA_CMD="export OF_MAINTAINER=EvilAnsh"
+export EXTRA_CMD="export RMX2001_BUILD=false"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
