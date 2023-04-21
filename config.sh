@@ -21,6 +21,7 @@ DEPS=(
     "https://github.com/OrangeFoxRecovery/Avatar.git misc"
 )
 
+
 # Extra Command
 export EXTRA_CMD="export OF_MAINTAINER=Sushrut1101"
 
