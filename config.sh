@@ -2,16 +2,16 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/stuepz/device_xiaomi_mt6781.git -b twrp-12.1_13.0.6.0"
+export DT_LINK="https://github.com/stuepz/device_xiaomi_mt6789.git -b twrp-12"
 
-export DEVICE="viva"
+export DEVICE="rock"
 export OEM="xiaomi"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
 ## "bootimage" - for A/B devices without recovery partition (and without vendor boot)
 ## "vendorbootimage" - for devices Using vendor boot for the recovery ramdisk (Usually for devices shipped with Android 12 or higher)
-export TARGET="bootimage"
+export TARGET="vendorbootimage"
 
 export OUTPUT="OrangeFox*.zip"
 
@@ -22,7 +22,7 @@ DEPS=(
 )
 
 # Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=Sushrut1101"
+export EXTRA_CMD="export OF_MAINTAINER=Stuepz"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
