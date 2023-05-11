@@ -3,7 +3,6 @@
 # Device
 export FOX_BRANCH="fox_12.1"
 export DT_LINK="https://github.com/Fahadali2315/twrp-borag-tree -b fox_12.1"
-
 export DEVICE="borag"
 export OEM="motorola"
 
