@@ -30,16 +30,18 @@ FILENAME=$(echo $OUTPUT)
 
 # Upload to oshi.at
 if [ -z "$TIMEOUT" ];then
-    TIMEOUT=20160
+    TIMEOUT=00160
 fi
 
 # Upload to WeTransfer
 # NOTE: the current Docker Image, "registry.gitlab.com/sushrut1101/docker:latest", includes the 'transfer' binary by Default
-curl -sL $FILENAME https://git.io/file-transfer | sh
 transfer wet $FILENAME > link.txt || { echo "ERROR: Failed to Upload the Build!" && exit 1; }
 
 # Mirror to oshi.at
 curl -T $FILENAME https://oshi.at/${FILENAME}/${TIMEOUT} > mirror.txt || { echo "WARNING: Failed to Mirror the Build!"; }
+
+DL_LINK=$(cat link.txt | grep Download | cut -d\  -f3)
+MIRROR_LINK=$(cat mirror.txt | grep Download | cut -d\  -f1)
 
 DL_LINK=$(cat link.txt | grep Download | cut -d\  -f3)
 MIRROR_LINK=$(cat mirror.txt | grep Download | cut -d\  -f1)
