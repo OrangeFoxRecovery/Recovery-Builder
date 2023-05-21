@@ -2,10 +2,10 @@
 
 # Device
 export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://github.com/rootshaxor/android_device_oppo_cph2015.git -b fox_9.0"
+export DT_LINK="https://github.com/rootshaxor/android_device_oppo_cph2015 -b fox_9.0"
 
-export DEVICE="OP4C7D"
-export OEM="oppo"
+export DEVICE="oppo"
+export OEM="OP4C7D"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
