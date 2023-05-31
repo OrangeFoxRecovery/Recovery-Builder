@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="git@github.com:vherawidatama/android_device_google_redbull.git -b android-11"
+export DT_LINK="https://github.com/vherawidatama/android_device_google_redbull.git -b android-11"
 
 export DEVICE="redbull"
 export OEM="google"
