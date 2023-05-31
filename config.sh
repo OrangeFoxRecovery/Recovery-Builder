@@ -2,10 +2,10 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/vherawidatama/android_device_xiaomi_taoyao-twrp.git -b android-13.0"
+export DT_LINK="git@github.com:vherawidatama/android_device_google_redbull.git -b android-11"
 
-export DEVICE="taoyao"
-export OEM="xiaomi"
+export DEVICE="redbull"
+export OEM="google"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
