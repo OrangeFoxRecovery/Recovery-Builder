@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_11.1"
+export FOX_BRANCH="fox_12.1"
 export DT_LINK="https://github.com/AP-XD/OFOX_device_asus_X01AD -b android-9.0"
 
 export DEVICE="X01AD"
@@ -22,7 +22,7 @@ DEPS=(
 )
 
 # Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=Sushrut1101"
+export EXTRA_CMD="export OF_MAINTAINER=Hirokixd28"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
