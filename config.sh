@@ -2,10 +2,10 @@
 
 # Device
 export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export DT_LINK="https://gitlab.com/OrangeFox/device/x01ad.git -b android-9.0"
 
-export DEVICE="beryllium"
-export OEM="xiaomi"
+export DEVICE="X01AD"
+export OEM="asus"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
