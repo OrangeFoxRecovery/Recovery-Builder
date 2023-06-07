@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/x01ad.git -b android-9.0"
+export FOX_BRANCH="fox_11.1"
+export DT_LINK="https://github.com/AP-XD/OFOX_device_asus_X01AD -b android-9.0"
 
 export DEVICE="X01AD"
 export OEM="asus"
