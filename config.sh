@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export FOX_BRANCH="twrp-11"
+export DT_LINK="https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-11"
 
-export DEVICE="beryllium"
+export DEVICE="blossom"
 export OEM="xiaomi"
 
 # Build Target
@@ -13,7 +13,7 @@ export OEM="xiaomi"
 ## "vendorbootimage" - for devices Using vendor boot for the recovery ramdisk (Usually for devices shipped with Android 12 or higher)
 export TARGET="recoveryimage"
 
-export OUTPUT="OrangeFox*.zip"
+export OUTPUT="TWRP*.zip"
 
 # Additional Dependencies (eg: Kernel Source)
 # Format: "repo dest"
@@ -22,7 +22,7 @@ DEPS=(
 )
 
 # Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=Sushrut1101"
+export EXTRA_CMD="export OF_MAINTAINER=Doni250"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
