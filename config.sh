@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export FOX_BRANCH="fox_12.1"
+export DT_LINK=" https://github.com/stim87/RMX2155_tree_device.git-b fox_12.1"
 
-export DEVICE="beryllium"
-export OEM="xiaomi"
+export DEVICE="RMX2155"
+export OEM="realme"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
@@ -22,7 +22,7 @@ DEPS=(
 )
 
 # Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=Sushrut1101"
+export EXTRA_CMD="export OF_MAINTAINER=Stim"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
