@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#bruh......
 # Device
 export FOX_BRANCH="11"
 export DT_LINK="https://github.com/Asce-XOX/android_device_xiaomi_lancelot_twrp.git -b 11"
