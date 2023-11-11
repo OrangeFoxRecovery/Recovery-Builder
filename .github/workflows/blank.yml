@@ -21,20 +21,7 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        sudo apt-get update
-        sudo apt-get install -y build-essential libncurses5 libncurses5:i386 \
-          zlib1g zlib1g:i386 g++-multilib git-core gnupg flex bison gperf \
-          build-essential zip curl libc6-dev libncurses5-dev:i386 \
-          x11proto-core-dev libx11-dev:i386 libreadline6-dev:i386 \
-          libgl1-mesa-glx:i386 libgl1-mesa-dev g++-multilib \
-          libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev \
-          libx11-dev:i386 libreadline6-dev:i386 libgl1-mesa-glx:i386 \
-          libgl1-mesa-dev g++-multilib libc6-dev-i386 \
-          lib32ncurses5-dev x11proto-core-dev libx11-dev:i386 \
-          libreadline6-dev:i386 libgl1-mesa-glx:i386 libgl1-mesa-dev \
-          g++-multilib libc6-dev-i386 lib32ncurses5-dev \
-          x11proto-core-dev libx11-dev:i386 libreadline6-dev:i386 \
-          libgl1-mesa-glx:i386 libgl1-mesa-dev
+      sudo apt-get install git-core gnupg flex bison build-essential zip curl zlib1g-dev libc6-dev-i386 libncurses5 x11proto-core-dev libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc unzip fontconfig
 
     - name: Clone Orange Fox Repository
       run: |
@@ -47,7 +34,7 @@ jobs:
       run: |
         cd fox
         . build/envsetup.sh
-        lunch omni_codename-eng # replace 'codename' with your device codename
+        lunch omni_lancelot-eng # replace 'codename' with your device codename
         make recoveryimage
 
     - name: Upload Artifact
