@@ -30,12 +30,12 @@ jobs:
 
     - name: Clone Orange Fox Repository
       run: |
-      mkdir ~/OrangeFox_sync
-      cd ~/OrangeFox_sync
+      
+      
       git clone https://gitlab.com/OrangeFox/sync.git # (or, using ssh, "git clone git@gitlab.com:OrangeFox/sync.git")
-      cd ~/OrangeFox_sync/sync/
-      ./orangefox_sync.sh --branch 11.0 --path ~/fox_11.1
-      cd ~/fox_11.1 # (or whichever directory hosts the synced manifest)
+  
+      ./orangefox_sync.sh --branch 11.0 
+      
       git clone https://github.com/Asce-XOX/android_device_xiaomi_lancelot_twrp.git
     
     
