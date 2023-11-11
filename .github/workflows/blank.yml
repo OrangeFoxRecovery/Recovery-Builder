@@ -21,24 +21,24 @@ jobs:
 
     - name: Install Dependencies
       run: |
-       cd ~
-       sudo apt install git aria2 -y
-       git clone https://gitlab.com/OrangeFox/misc/scripts
-       cd scripts
-       sudo bash setup/android_build_env.sh
-       sudo bash setup/install_android_sdk.sh
+        sudo apt-get install -y git-core gnupg flex bison build-essential zip \
+          curl zlib1g-dev libc6-dev-i386 libncurses5 x11proto-core-dev \
+          libx11-dev lib32z1-dev libgl1-mesa-dev libxml2-utils xsltproc \
+          unzip fontconfig
+
+          sudo apt install git aria2 -y
+          git clone https://gitlab.com/OrangeFox/misc/scripts
+          cd scripts
+          sudo bash setup/android_build_env.sh
+          sudo bash setup/install_android_sdk.sh
 
     - name: Clone Orange Fox Repository
       run: |
-      
-      
-      git clone https://gitlab.com/OrangeFox/sync.git # (or, using ssh, "git clone git@gitlab.com:OrangeFox/sync.git")
-  
-      ./orangefox_sync.sh --branch 11.0 
-      
-      git clone https://github.com/Asce-XOX/android_device_xiaomi_lancelot_twrp.git
-    
-    
+        git clone https://gitlab.com/OrangeFox/sync.git  fox
+        cd fox
+        repo init -u https://gitlab.com/OrangeFox/Manifest.git -b fox_10.0
+        repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+
     - name: Build Orange Fox
       run: |
         cd fox
