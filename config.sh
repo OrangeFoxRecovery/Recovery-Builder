@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
+export FOX_BRANCH="fox_12.1"
 export DT_LINK="https://github.com/mehhh12/device_xiaomi_chime-recovery/tree/fox-12.1"
 
 export DEVICE="chime"
