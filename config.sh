@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#a
 # Device
 export FOX_BRANCH="12.1"
 export DT_LINK="https://github.com/Wishmasterflo/ofox_lynx.git -b Android-13"
