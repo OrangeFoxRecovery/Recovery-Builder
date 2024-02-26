@@ -19,10 +19,11 @@ export OUTPUT="OrangeFox*.zip"
 # Format: "repo dest"
 DEPS=(
     "https://github.com/OrangeFoxRecovery/Avatar.git misc"
+    "https://github.com/TeamWin/android_device_samsung_gts210velte/blob/android-7.1/kernel kernel"
 )
 
 # Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=Sushrut1101"
+export EXTRA_CMD="export OF_MAINTAINER=AustinN"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
