@@ -7,7 +7,7 @@ export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
 export DEVICE="beryllium"
 export OEM="xiaomi"
 
-# Build Target
+# Build Targe
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
 ## "bootimage" - for A/B devices without recovery partition (and without vendor boot)
 ## "vendorbootimage" - for devices Using vendor boot for the recovery ramdisk (Usually for devices shipped with Android 12 or higher)
@@ -19,10 +19,11 @@ export OUTPUT="OrangeFox*.zip"
 # Format: "repo dest"
 DEPS=(
     "https://github.com/OrangeFoxRecovery/Avatar.git misc"
+    "https://github.com/TeamWin/android_device_samsung_gts210velte/blob/android-7.1/kernel kernel"
 )
 
 # Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=Sushrut1101"
+export EXTRA_CMD="export OF_MAINTAINER=AustinNari"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
