@@ -13,7 +13,7 @@ env:
     CIRRUS_SHELL: bash
 
 task:
-  name: "Recovery Build"
+  name: "Recovery Building"
   timeout_in: 120m
   container:
       image: ghcr.io/sushrut1101/docker:arch
