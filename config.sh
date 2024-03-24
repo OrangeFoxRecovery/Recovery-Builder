@@ -2,7 +2,7 @@
 
 # Device
 export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export DT_LINK="https://github.com/DhineshCool/twrp_device_motorola_hanoip -b twrp-12.1"
 
 export DEVICE="hanoip"
 export OEM="motorola"
