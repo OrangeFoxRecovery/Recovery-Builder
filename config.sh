@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
+export FOX_BRANCH="fox_12.1"
 export DT_LINK="https://github.com/DhineshCool/twrp_device_motorola_hanoip -b twrp-12.1"
 
 export DEVICE="hanoip"
