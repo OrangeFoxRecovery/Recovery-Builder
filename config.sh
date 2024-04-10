@@ -4,8 +4,8 @@
 export FOX_BRANCH="master"
 export DT_LINK="https://github.com/RullV2/twrp_realme_RMX3191.git -b master"
 
-export DEVICE="beryllium"
-export OEM="xiaomi"
+export DEVICE="even"
+export OEM="realme"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
