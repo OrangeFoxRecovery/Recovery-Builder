@@ -5,7 +5,7 @@ export FOX_BRANCH="fox_10.0"
 export DT_LINK="https://github.com/whkoo/android_device_ums512_1h10.git -b fox_10.0"
 
 export DEVICE="sprd"
-export OEM="xiaomi"
+export OEM="topway"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
