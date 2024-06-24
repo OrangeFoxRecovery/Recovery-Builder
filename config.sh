@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
+export FOX_BRANCH="xcover4ltexx-user-9-PPR1.180610.011-G390FXXS6CTI2-release-keys"
 export DT_LINK="https://github.com/twrpdtgen/android_device_samsung_xcover4lte.git -b xcover4ltexx-user-9-PPR1.180610.011-G390FXXS6CTI2-release-keys"
 
 export DEVICE="xcover4lte"
