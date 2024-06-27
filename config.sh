@@ -2,10 +2,10 @@
 
 # Device
 export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://gitlab.com/OrangeFox/device/infinix-x6731b.git -b fox_12.1"
+export DT_LINK="https://github.com/TeeChit/hnali-q/tree/main/lineage-device-tree -b fox_12.1"
 
-export DEVICE="infinix-x6731b"
-export OEM="infinix"
+export DEVICE="honor_hnali-q"
+export OEM="honor"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
@@ -22,7 +22,7 @@ DEPS=(
 )
 
 # Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=Sushrut1101"
+export EXTRA_CMD="export OF_MAINTAINER=TeeChit"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
