@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export FOX_BRANCH="fox_10.0"
+export DT_LINK="https://github.com/onesmiledx/twrp_device_samsung_a10s.git -b ofox"
 
-export DEVICE="beryllium"
-export OEM="xiaomi"
+export DEVICE="a10s"
+export OEM="samsung"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
@@ -18,11 +18,11 @@ export OUTPUT="OrangeFox*.zip"
 # Additional Dependencies (eg: Kernel Source)
 # Format: "repo dest"
 DEPS=(
-    "https://github.com/OrangeFoxRecovery/Avatar.git misc"
+    "https://github.com/onesmiledx/avatar.git misc"
 )
 
 # Extra Command
-export EXTRA_CMD="export OF_MAINTAINER=Sushrut1101"
+export EXTRA_CMD="export OF_MAINTAINER=Starlix"
 
 # Magisk
 ## Use the Latest Release of Magisk for the OrangeFox addon
