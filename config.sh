@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
+export FOX_BRANCH="fox_12.1"
 export DT_LINK="https://github.com/yoro1836/android_device_samsung_r0q -b 14"
 
 export DEVICE="r0q"
