@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
+export FOX_BRANCH="fox_11.0"
 export DT_LINK="https://github.com/LineageOS/android_device_samsung_a5xelte.git -b fox_11.0"
 
 export DEVICE="a5xelte"
