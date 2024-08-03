@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_11.0"
-export DT_LINK="https://github.com/LineageOS/android_device_samsung_a5xelte.git -b fox_11.0"
+export FOX_BRANCH="lineage-18.1"
+export DT_LINK="https://github.com/LineageOS/android_device_samsung_a5xelte.git -b lineage-18.1"
 
 export DEVICE="a5xelte"
 export OEM="samsung"
