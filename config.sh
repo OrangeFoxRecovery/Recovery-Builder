@@ -4,7 +4,7 @@
 export FOX_BRANCH="fox_11.0"
 export DT_LINK="https://github.com/OrangeFoxRecovery/device_samsung_hero2lte"
 
-export DEVICE="r0q"
+export DEVICE="hero2lte"
 export OEM="samsung"
 
 # Build Target
