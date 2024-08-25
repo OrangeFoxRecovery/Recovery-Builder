@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_12.1"
-export DT_LINK="https://github.com/yoro1836/android_device_samsung_r0q -b 14"
+export FOX_BRANCH="fox_11.0"
+export DT_LINK="https://github.com/OrangeFoxRecovery/device_samsung_hero2lte"
 
 export DEVICE="r0q"
 export OEM="samsung"
