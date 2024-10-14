@@ -4,8 +4,8 @@
 export FOX_BRANCH="android-12.1"
 export DT_LINK="https://github.com/s5e8535/twrp_device_samsung_m14x -b android-12.1"
 
-export DEVICE="beryllium"
-export OEM="xiaomi"
+export DEVICE="m14x"
+export OEM="samsung"
 
 # Build Target
 ## "recoveryimage" - for A-Only Devices without using Vendor Boot
