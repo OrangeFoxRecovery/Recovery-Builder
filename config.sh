@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export FOX_BRANCH="android-12.1"
+export DT_LINK="https://github.com/s5e8535/twrp_device_samsung_m14x -b android-12.1"
 
 export DEVICE="beryllium"
 export OEM="xiaomi"
