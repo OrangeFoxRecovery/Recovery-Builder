@@ -2,9 +2,9 @@
 
 # Device
 export FOX_BRANCH="fox_9.0"
-export DT_LINK="https://gitlab.com/OrangeFox/device/beryllium.git -b fox_9.0"
+export DT_LINK="https://github.com/xiaomi-begonia-dev/android_device_redmi_begonia.git"
 
-export DEVICE="beryllium"
+export DEVICE="begonia"
 export OEM="xiaomi"
 
 # Build Target
