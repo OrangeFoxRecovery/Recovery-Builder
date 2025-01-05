@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Device
-export FOX_BRANCH="fox_11.0_Q"
-export DT_LINK="https://github.com/RocketRakun/Infinix-X695C.git -b fox_11.0_Q"
+export FOX_BRANCH="orangefox"
+export DT_LINK="https://github.com/RocketRakun/twrp_tree_infinix_X695C.git -b orangefox"
 
-export DEVICE="x695c"
+export DEVICE="X695C"
 export OEM="infinix"
 
 # Build Target
